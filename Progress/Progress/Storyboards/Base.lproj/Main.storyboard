@@ -129,6 +129,10 @@
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="cMW-Te-UYK" id="w1H-TT-yRb"/>
+                                            <outlet property="delegate" destination="cMW-Te-UYK" id="hFf-fq-KpZ"/>
+                                        </connections>
                                     </tableView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guided Project Confidence:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mG5-4f-q6i">
                                         <rect key="frame" x="40" y="294" width="306" height="30"/>
@@ -220,6 +224,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="g89-Vw-CUX"/>
+        <segue reference="seE-lZ-KvP"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -21,6 +21,8 @@
 		6ED5A0C423834DEF006932F1 /* ModuleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5A0C323834DEF006932F1 /* ModuleDetailViewController.swift */; };
 		6ED5A0C623834F44006932F1 /* ModuleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5A0C523834F44006932F1 /* ModuleController.swift */; };
 		6ED5A0C823834F4E006932F1 /* CareerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5A0C723834F4E006932F1 /* CareerController.swift */; };
+		6ED5A0CA23835EE3006932F1 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5A0C923835EE3006932F1 /* CoreDataStack.swift */; };
+		6ED5A0CC23835F5D006932F1 /* Module+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5A0CB23835F5D006932F1 /* Module+Convenience.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +63,8 @@
 		6ED5A0C323834DEF006932F1 /* ModuleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleDetailViewController.swift; sourceTree = "<group>"; };
 		6ED5A0C523834F44006932F1 /* ModuleController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleController.swift; sourceTree = "<group>"; };
 		6ED5A0C723834F4E006932F1 /* CareerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerController.swift; sourceTree = "<group>"; };
+		6ED5A0C923835EE3006932F1 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		6ED5A0CB23835F5D006932F1 /* Module+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Module+Convenience.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,8 @@
 			isa = PBXGroup;
 			children = (
 				6ED5A08D23831A75006932F1 /* Progress.xcdatamodeld */,
+				6ED5A0C923835EE3006932F1 /* CoreDataStack.swift */,
+				6ED5A0CB23835F5D006932F1 /* Module+Convenience.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -330,6 +336,8 @@
 				6ED5A0C423834DEF006932F1 /* ModuleDetailViewController.swift in Sources */,
 				6ED5A0C623834F44006932F1 /* ModuleController.swift in Sources */,
 				6ED5A0BE23832330006932F1 /* ObjectiveTableViewCell.swift in Sources */,
+				6ED5A0CC23835F5D006932F1 /* Module+Convenience.swift in Sources */,
+				6ED5A0CA23835EE3006932F1 /* CoreDataStack.swift in Sources */,
 				6ED5A0C823834F4E006932F1 /* CareerController.swift in Sources */,
 				6ED5A0C0238324EB006932F1 /* ModuleTableViewCell.swift in Sources */,
 				6ED5A08F23831A75006932F1 /* Progress.xcdatamodeld in Sources */,
