@@ -10,15 +10,16 @@ import UIKit
 
 class ModuleTableViewCell: UITableViewCell {
 
+    // MARK: - Outlets
+    @IBOutlet weak var moduleNameLabel: UILabel!
+    @IBOutlet weak var masteryPercentageLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }
