@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15508" systemVersion="19B88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Career" representedClassName="Career" syncable="YES" codeGenerationType="class">
+        <attribute name="assignment" optional="YES" attributeType="String"/>
+        <attribute name="completed" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+    </entity>
     <entity name="Module" representedClassName="Module" syncable="YES" codeGenerationType="class">
         <attribute name="confidence" optional="YES" attributeType="Integer 16" defaultValueString="1" usesScalarValueType="YES"/>
         <attribute name="mastery" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
@@ -9,5 +14,6 @@
     </entity>
     <elements>
         <element name="Module" positionX="-63" positionY="-18" width="128" height="118"/>
+        <element name="Career" positionX="-54" positionY="27" width="128" height="88"/>
     </elements>
 </model>
