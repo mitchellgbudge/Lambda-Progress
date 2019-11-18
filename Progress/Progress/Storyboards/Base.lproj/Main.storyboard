@@ -10,7 +10,7 @@
         <!--iOS Core-->
         <scene sceneID="UQ0-PK-s8k">
             <objects>
-                <tableViewController id="Fl8-Wy-J3c" sceneMemberID="viewController">
+                <tableViewController id="Fl8-Wy-J3c" customClass="ModulesTableViewController" customModule="Progress" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="QCG-mN-MMQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -23,28 +23,29 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Module name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXO-Rj-dvA">
-                                            <rect key="frame" x="20" y="11" width="104" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mastered 100%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzQ-fy-lIR">
-                                            <rect key="frame" x="275" y="11" width="119" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="151" translatesAutoresizingMaskIntoConstraints="NO" id="mZh-IJ-VXM">
+                                            <rect key="frame" x="20" y="11" width="374" height="21"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Module name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXO-Rj-dvA">
+                                                    <rect key="frame" x="0.0" y="0.0" width="104" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Mastered 100%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzQ-fy-lIR">
+                                                    <rect key="frame" x="255" y="0.0" width="119" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="QXO-Rj-dvA" firstAttribute="top" secondItem="WN0-gN-gXe" secondAttribute="topMargin" id="0fM-aW-b4q"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="QXO-Rj-dvA" secondAttribute="bottom" id="Jqc-98-dwo"/>
-                                        <constraint firstItem="QXO-Rj-dvA" firstAttribute="leading" secondItem="WN0-gN-gXe" secondAttribute="leadingMargin" id="ME8-0m-kyb"/>
-                                        <constraint firstItem="XzQ-fy-lIR" firstAttribute="centerY" secondItem="WN0-gN-gXe" secondAttribute="centerY" id="SaS-Lw-Z2R"/>
-                                        <constraint firstItem="XzQ-fy-lIR" firstAttribute="top" secondItem="WN0-gN-gXe" secondAttribute="topMargin" id="T8Q-9L-pAC"/>
-                                        <constraint firstItem="QXO-Rj-dvA" firstAttribute="centerY" secondItem="WN0-gN-gXe" secondAttribute="centerY" id="VxU-mf-DWq"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="XzQ-fy-lIR" secondAttribute="bottom" id="bSV-To-Vfa"/>
-                                        <constraint firstItem="XzQ-fy-lIR" firstAttribute="trailing" secondItem="WN0-gN-gXe" secondAttribute="trailingMargin" id="wXp-Ao-rgr"/>
+                                        <constraint firstItem="mZh-IJ-VXM" firstAttribute="leading" secondItem="WN0-gN-gXe" secondAttribute="leadingMargin" id="4or-tU-kat"/>
+                                        <constraint firstItem="mZh-IJ-VXM" firstAttribute="top" secondItem="WN0-gN-gXe" secondAttribute="topMargin" id="6rd-Pb-8wE"/>
+                                        <constraint firstItem="mZh-IJ-VXM" firstAttribute="trailing" secondItem="WN0-gN-gXe" secondAttribute="trailingMargin" id="O0c-KD-4n5"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="mZh-IJ-VXM" secondAttribute="bottom" id="fw2-ic-zEh"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -75,7 +76,7 @@
         <!--Module name-->
         <scene sceneID="eSB-A6-b5k">
             <objects>
-                <viewController id="cMW-Te-UYK" sceneMemberID="viewController">
+                <viewController id="cMW-Te-UYK" customClass="ModuleDetailViewController" customModule="Progress" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RB2-nl-3hw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

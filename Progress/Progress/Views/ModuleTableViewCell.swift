@@ -11,6 +11,7 @@ import UIKit
 class ModuleTableViewCell: UITableViewCell {
 
     // MARK: - Outlets
+    
     @IBOutlet weak var moduleNameLabel: UILabel!
     @IBOutlet weak var masteryPercentageLabel: UILabel!
     

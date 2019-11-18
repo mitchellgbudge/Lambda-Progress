@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+class ModuleController {
+    
+    // TODO: - add update method
+    
+}
