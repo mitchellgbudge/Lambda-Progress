@@ -1,5 +1,4 @@
-{
-  "modules": [
+[
     {
       "name": "Swift Fundamentals I",
       "unit": "Swift Fundamentals",
@@ -20,5 +19,5 @@
       "unit": "Swift Fundamentals",
       "sprint": 1
     }
-  ]
-}
+]
+

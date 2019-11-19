@@ -17,7 +17,11 @@ class ModulesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        moduleController.decodeJSON()
+        self.tableView.reloadData()
     }
+    
+
 
     // MARK: - Table view data source
 

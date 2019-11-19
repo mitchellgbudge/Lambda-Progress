@@ -24,13 +24,10 @@ class ModuleController {
         let jsonDecoder = JSONDecoder()
         do {
             let downloadedModules = try jsonDecoder.decode([ModuleRepresentation].self, from: jsonData)
-            for module in downloadedModules {
-                print(module)
-                modules.append(module)
-            }
+            modules = downloadedModules
         } catch {
-            // TODO: - improve error handling
-            fatalError()
+            NSLog("Error decoding JSON data: \(error)")
+            return
         }
     }
     
