@@ -10,21 +10,30 @@ import UIKit
 
 class ModulesTableViewController: UITableViewController {
 
+    // MARK: - Properties
+    let moduleController = ModuleController()
+    
+    // MARK: - View lifecycle methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return moduleController.modules.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ModuleCell", for: indexPath) as? ModuleTableViewCell else { return UITableViewCell() }
-        cell.moduleNameLabel.text = "Swift Fundamentals I"
-        cell.masteryPercentageLabel.text = "100% mastered"
+        let module = moduleController.modules[indexPath.row]
+        cell.moduleNameLabel.text = module.name
+        if module.mastery == true {
+            cell.masteryPercentageLabel.text = "100% mastered"
+        } else {
+            cell.masteryPercentageLabel.text = "0% mastered"
+        }
         return cell
     }
 

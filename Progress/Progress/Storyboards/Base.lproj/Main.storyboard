@@ -120,6 +120,7 @@
                                                         <constraint firstItem="ouj-nd-gRA" firstAttribute="top" secondItem="gkB-Nn-FJ1" secondAttribute="topMargin" constant="6.5" id="Xqt-gb-U3e"/>
                                                         <constraint firstItem="8TG-QS-RZv" firstAttribute="centerY" secondItem="gkB-Nn-FJ1" secondAttribute="centerY" id="a2r-Ro-JlE"/>
                                                         <constraint firstItem="8TG-QS-RZv" firstAttribute="top" secondItem="gkB-Nn-FJ1" secondAttribute="topMargin" constant="2" id="e3g-fs-Kfc"/>
+                                                        <constraint firstItem="8TG-QS-RZv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="ouj-nd-gRA" secondAttribute="trailing" constant="8" symbolic="YES" id="lCb-kE-ZTE"/>
                                                         <constraint firstAttribute="bottomMargin" secondItem="ouj-nd-gRA" secondAttribute="bottom" constant="6.5" id="tGJ-vy-zGw"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
@@ -130,8 +131,8 @@
                                             </tableViewCell>
                                         </prototypes>
                                         <connections>
-                                            <outlet property="dataSource" destination="cMW-Te-UYK" id="w1H-TT-yRb"/>
-                                            <outlet property="delegate" destination="cMW-Te-UYK" id="hFf-fq-KpZ"/>
+                                            <outlet property="dataSource" destination="cMW-Te-UYK" id="oHe-AF-BK0"/>
+                                            <outlet property="delegate" destination="cMW-Te-UYK" id="W7K-BA-w7e"/>
                                         </connections>
                                     </tableView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guided Project Confidence:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mG5-4f-q6i">
@@ -140,8 +141,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cH6-1C-OSS">
-                                        <rect key="frame" x="144" y="331" width="167" height="36"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cH6-1C-OSS">
+                                        <rect key="frame" x="144" y="331" width="166" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Three stars go here"/>
                                     </button>
@@ -151,15 +152,18 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmr-yD-pg4">
-                                        <rect key="frame" x="144" y="446" width="167" height="36"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmr-yD-pg4">
+                                        <rect key="frame" x="143" y="446" width="167" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <state key="normal" title="Three stars go here"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91q-lF-Bkf">
-                                        <rect key="frame" x="150" y="503" width="155" height="48"/>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91q-lF-Bkf">
+                                        <rect key="frame" x="150" y="503" width="153" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Save button"/>
+                                        <connections>
+                                            <action selector="saveButtonPressed:" destination="cMW-Te-UYK" eventType="touchUpInside" id="f13-bS-jR9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -169,6 +173,7 @@
                                     <constraint firstItem="TkU-sy-6HU" firstAttribute="leading" secondItem="JkE-az-3Nw" secondAttribute="leading" constant="40" id="5k8-H4-oCe"/>
                                     <constraint firstItem="91q-lF-Bkf" firstAttribute="top" secondItem="kmr-yD-pg4" secondAttribute="bottom" constant="21" id="6Y8-v0-Imm"/>
                                     <constraint firstItem="yb7-Ce-lDo" firstAttribute="centerX" secondItem="jDL-ds-N2W" secondAttribute="centerX" id="A3m-oa-tsB"/>
+                                    <constraint firstItem="qXl-dU-mR7" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="mG5-4f-q6i" secondAttribute="trailing" symbolic="YES" id="Byq-Iy-ovA"/>
                                     <constraint firstItem="91q-lF-Bkf" firstAttribute="leading" secondItem="JkE-az-3Nw" secondAttribute="leading" constant="150" id="Ds4-Yd-crq"/>
                                     <constraint firstItem="cH6-1C-OSS" firstAttribute="top" secondItem="mG5-4f-q6i" secondAttribute="bottom" constant="7" id="Ixw-UH-0MT"/>
                                     <constraint firstAttribute="bottom" secondItem="kmr-yD-pg4" secondAttribute="bottom" constant="69" id="KaF-6n-mxo"/>
@@ -176,11 +181,13 @@
                                     <constraint firstItem="mG5-4f-q6i" firstAttribute="leading" secondItem="Lp7-Sb-WTH" secondAttribute="leading" id="TIh-QE-S05"/>
                                     <constraint firstItem="kmr-yD-pg4" firstAttribute="centerX" secondItem="91q-lF-Bkf" secondAttribute="centerX" id="VuL-92-qRP"/>
                                     <constraint firstItem="yb7-Ce-lDo" firstAttribute="top" secondItem="TkU-sy-6HU" secondAttribute="bottom" id="XGx-Zg-Ldf"/>
-                                    <constraint firstItem="cH6-1C-OSS" firstAttribute="leading" secondItem="kmr-yD-pg4" secondAttribute="leading" id="Y6W-W1-TFq"/>
+                                    <constraint firstItem="cH6-1C-OSS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kmr-yD-pg4" secondAttribute="leading" id="Y6W-W1-TFq"/>
+                                    <constraint firstItem="qXl-dU-mR7" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="TkU-sy-6HU" secondAttribute="trailing" symbolic="YES" id="dmm-4n-rcQ"/>
                                     <constraint firstAttribute="trailing" secondItem="yb7-Ce-lDo" secondAttribute="trailing" constant="20" id="eUc-R9-jmj"/>
+                                    <constraint firstItem="qXl-dU-mR7" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Lp7-Sb-WTH" secondAttribute="trailing" symbolic="YES" id="fCg-ld-5FC"/>
                                     <constraint firstItem="cH6-1C-OSS" firstAttribute="leading" secondItem="JkE-az-3Nw" secondAttribute="leading" constant="144" id="h2V-EY-jXg"/>
                                     <constraint firstItem="yb7-Ce-lDo" firstAttribute="leading" secondItem="JkE-az-3Nw" secondAttribute="leading" constant="20" id="ier-vc-Aqd"/>
-                                    <constraint firstItem="cH6-1C-OSS" firstAttribute="trailing" secondItem="kmr-yD-pg4" secondAttribute="trailing" id="kSI-Qa-Acu"/>
+                                    <constraint firstItem="cH6-1C-OSS" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kmr-yD-pg4" secondAttribute="trailing" id="kSI-Qa-Acu"/>
                                     <constraint firstItem="91q-lF-Bkf" firstAttribute="bottom" secondItem="JkE-az-3Nw" secondAttribute="bottom" id="kUg-tB-GVY"/>
                                     <constraint firstItem="mG5-4f-q6i" firstAttribute="top" secondItem="yb7-Ce-lDo" secondAttribute="bottom" constant="8" id="q96-1I-XvJ"/>
                                     <constraint firstItem="yb7-Ce-lDo" firstAttribute="centerX" secondItem="cH6-1C-OSS" secondAttribute="centerX" id="xDJ-9m-8b0"/>
@@ -199,6 +206,12 @@
                         <viewLayoutGuide key="safeArea" id="HdV-98-gvh"/>
                     </view>
                     <navigationItem key="navigationItem" title="Module name" id="Lad-3J-sFl"/>
+                    <connections>
+                        <outlet property="afternoonStarsButton" destination="kmr-yD-pg4" id="rQS-Xh-tzA"/>
+                        <outlet property="guidedStarsButton" destination="cH6-1C-OSS" id="auw-ZS-Qlw"/>
+                        <outlet property="saveButton" destination="91q-lF-Bkf" id="O1k-lZ-TBk"/>
+                        <outlet property="tableView" destination="yb7-Ce-lDo" id="6jo-g6-9N4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gDi-js-egI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
