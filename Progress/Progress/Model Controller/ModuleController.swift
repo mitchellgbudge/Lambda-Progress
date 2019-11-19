@@ -10,8 +10,11 @@ import Foundation
 
 class ModuleController {
     
-    var modules = [Module(name: "Swift Fundamentals I", unit: "iOS Fundamentals"),
-    Module(name: "Swift Fundamentals II", unit: "iOS Fundamentals")]
+    var modules: [Module] = []
+    
+    func decodeJSON() {
+        
+    }
     
     // TODO: - add update method
     

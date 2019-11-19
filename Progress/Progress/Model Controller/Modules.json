@@ -1,0 +1,24 @@
+{
+  "modules": [
+    {
+      "name": "Swift Fundamentals I",
+      "unit": "Swift Fundamentals",
+      "sprint": 1
+    },
+    {
+      "name": "iOS Development Tools",
+      "unit": "Swift Fundamentals",
+      "sprint": 1
+    },
+    {
+      "name": "Swift Fundamentals II",
+      "unit": "Swift Fundamentals",
+      "sprint": 1
+    },
+    {
+      "name": "Swift Fundamentals III",
+      "unit": "Swift Fundamentals",
+      "sprint": 1
+    }
+  ]
+}
