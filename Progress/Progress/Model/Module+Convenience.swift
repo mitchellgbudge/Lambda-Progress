@@ -14,6 +14,7 @@ extension Module {
     @discardableResult convenience init(name: String,
                                         unit: String,
                                         mastery: Bool = false,
+                                        sprint: Int16,
                                         confidence: Double = 1.0,
                                         rating: Double = 1.0,
                                         identifier: String = UUID().uuidString,
@@ -22,6 +23,7 @@ extension Module {
         self.name = name
         self.unit = unit
         self.mastery = mastery
+        self.sprint = sprint
         self.confidence = confidence
         self.rating = rating
         self.identifier = identifier

@@ -10,10 +10,28 @@ import Foundation
 
 class ModuleController {
     
-    var modules: [Module] = []
+    var modules: [ModuleRepresentation] = []
     
     func decodeJSON() {
-        
+        guard let jsonLocation = Bundle.main.url(forResource: "Modules", withExtension: "json") else {
+            // TODO: - improve error handling
+            fatalError()
+        }
+        guard let jsonData = try? Data(contentsOf: jsonLocation) else {
+           // TODO: - improve error handling
+            fatalError()
+        }
+        let jsonDecoder = JSONDecoder()
+        do {
+            let downloadedModules = try jsonDecoder.decode([ModuleRepresentation].self, from: jsonData)
+            for module in downloadedModules {
+                print(module)
+                modules.append(module)
+            }
+        } catch {
+            // TODO: - improve error handling
+            fatalError()
+        }
     }
     
     // TODO: - add update method

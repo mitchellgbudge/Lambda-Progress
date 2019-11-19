@@ -24,6 +24,7 @@
 		6ED5A0CA23835EE3006932F1 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5A0C923835EE3006932F1 /* CoreDataStack.swift */; };
 		6ED5A0CC23835F5D006932F1 /* Module+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5A0CB23835F5D006932F1 /* Module+Convenience.swift */; };
 		6ED5A0CE2384671C006932F1 /* Modules.json in Resources */ = {isa = PBXBuildFile; fileRef = 6ED5A0CD2384671C006932F1 /* Modules.json */; };
+		6ED5A0D023849245006932F1 /* ModuleRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5A0CF23849245006932F1 /* ModuleRepresentation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		6ED5A0C923835EE3006932F1 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		6ED5A0CB23835F5D006932F1 /* Module+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Module+Convenience.swift"; sourceTree = "<group>"; };
 		6ED5A0CD2384671C006932F1 /* Modules.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Modules.json; sourceTree = "<group>"; };
+		6ED5A0CF23849245006932F1 /* ModuleRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleRepresentation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				6ED5A08D23831A75006932F1 /* Progress.xcdatamodeld */,
 				6ED5A0C923835EE3006932F1 /* CoreDataStack.swift */,
 				6ED5A0CB23835F5D006932F1 /* Module+Convenience.swift */,
+				6ED5A0CF23849245006932F1 /* ModuleRepresentation.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				6ED5A0C823834F4E006932F1 /* CareerController.swift in Sources */,
 				6ED5A0C0238324EB006932F1 /* ModuleTableViewCell.swift in Sources */,
 				6ED5A08F23831A75006932F1 /* Progress.xcdatamodeld in Sources */,
+				6ED5A0D023849245006932F1 /* ModuleRepresentation.swift in Sources */,
 				6ED5A08723831A75006932F1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
