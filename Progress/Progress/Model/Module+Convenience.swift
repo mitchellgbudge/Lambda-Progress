@@ -13,6 +13,7 @@ extension Module {
     
     @discardableResult convenience init(name: String,
                                         unit: String,
+                                        objectives: [String],
                                         mastery: Bool = false,
                                         sprint: Int16,
                                         confidence: Double = 1.0,
@@ -22,6 +23,7 @@ extension Module {
         self.init(context: context)
         self.name = name
         self.unit = unit
+        self.objectives = objectives
         self.mastery = mastery
         self.sprint = sprint
         self.confidence = confidence

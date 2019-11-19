@@ -1,23 +1,30 @@
 [
-    {
-      "name": "Swift Fundamentals I",
-      "unit": "Swift Fundamentals",
-      "sprint": 1
-    },
-    {
-      "name": "iOS Development Tools",
-      "unit": "Swift Fundamentals",
-      "sprint": 1
-    },
-    {
-      "name": "Swift Fundamentals II",
-      "unit": "Swift Fundamentals",
-      "sprint": 1
-    },
-    {
-      "name": "Swift Fundamentals III",
-      "unit": "Swift Fundamentals",
-      "sprint": 1
-    }
+  {
+    "name": "Swift Fundamentals I",
+    "unit": "Swift Fundamentals",
+    "objectives": [
+      "be able to identify use and understand the difference between the basic data types: `Int` `Double` `Bool` `String`",
+      "be able to understand how to apply mutability to variables (`let` vs. `var`)",
+      "be able to use conditional logic to execute various code paths",
+      "be able to iterate over an array using a loop to accomplish some task",
+      "be able to understand how braces `{}` are used to group code into blocks and how scope affects the lifespan of a variable"
+    ],
+    "sprint": 1
+  },
+  {
+    "name": "iOS Development Tools",
+    "unit": "Swift Fundamentals",
+    "sprint": 1
+  },
+  {
+    "name": "Swift Fundamentals II",
+    "unit": "Swift Fundamentals",
+    "sprint": 1
+  },
+  {
+    "name": "Swift Fundamentals III",
+    "unit": "Swift Fundamentals",
+    "sprint": 1
+  }
 ]
 

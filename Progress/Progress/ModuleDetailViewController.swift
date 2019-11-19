@@ -11,6 +11,12 @@ import UIKit
 class ModuleDetailViewController: UIViewController {
     
     // MARK: - Properties & outlets
+    var module: ModuleRepresentation? {
+        didSet {
+            updateViews()
+        }
+    }
+    var moduleController: ModuleController?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var guidedStarsButton: UIButton!
@@ -21,24 +27,39 @@ class ModuleDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        updateViews()
     }
     
     // MARK: - Actions
+    
+    func updateViews() {
+        guard isViewLoaded,
+            let module = module else { return }
+        self.title = module.name
+    }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
         
     }
     
     
+    
 }
 
 extension ModuleDetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20
+        guard let module = module,
+            let objectives = module.objectives else { return 0 }
+        return objectives.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ObjectiveCell", for: indexPath) as? ObjectiveTableViewCell
+            else { return UITableViewCell() }
+        guard let module = module,
+            let objectives = module.objectives else { return UITableViewCell() }
+        let objective = objectives[indexPath.row]
+        cell.objectiveLabel.text = objective
+        return cell
     }
 }

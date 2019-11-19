@@ -11,6 +11,7 @@ import Foundation
 struct ModuleRepresentation: Codable {
     var name: String?
     var unit: String?
+    var objectives: [String]?
     var mastery: Bool?
     var sprint: Int16
     var confidence: Double?

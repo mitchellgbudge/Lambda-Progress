@@ -44,7 +44,12 @@ class ModulesTableViewController: UITableViewController {
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-      
+        if segue.identifier == "ShowModule" {
+            guard let destinationVC = segue.destination as? ModuleDetailViewController,
+                let indexPath = tableView.indexPathForSelectedRow else { return }
+            destinationVC.module = moduleController.modules[indexPath.row]
+            destinationVC.moduleController = moduleController
+        }
     }
 
 }

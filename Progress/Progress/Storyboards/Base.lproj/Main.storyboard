@@ -51,7 +51,7 @@
                                 <connections>
                                     <outlet property="masteryPercentageLabel" destination="XzQ-fy-lIR" id="8TV-Xb-9kH"/>
                                     <outlet property="moduleNameLabel" destination="QXO-Rj-dvA" id="Q0l-mT-62R"/>
-                                    <segue destination="cMW-Te-UYK" kind="show" id="g89-Vw-CUX"/>
+                                    <segue destination="cMW-Te-UYK" kind="show" identifier="ShowModule" id="g89-Vw-CUX"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -62,11 +62,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="iOS Core" id="msE-fc-sEg">
                         <barButtonItem key="backBarButtonItem" title="Back to iOS Core" id="T5P-OJ-LeG"/>
-                        <barButtonItem key="rightBarButtonItem" title="Test" id="Ktw-mr-s50">
-                            <connections>
-                                <segue destination="cMW-Te-UYK" kind="show" id="seE-lZ-KvP"/>
-                            </connections>
-                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JG6-e5-61q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -236,7 +231,4 @@
             <point key="canvasLocation" x="-71" y="-381"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="seE-lZ-KvP"/>
-    </inferredMetricsTieBreakers>
 </document>
