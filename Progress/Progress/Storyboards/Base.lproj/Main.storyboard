@@ -155,6 +155,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="2qi-kh-8Z0"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="updateConfidence:" destination="cMW-Te-UYK" eventType="valueChanged" id="eXg-B4-HGd"/>
+                                </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Afternoon Project MVP:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lp7-Sb-WTH">
                                 <rect key="frame" x="20" y="598" width="374" height="30"/>
@@ -168,6 +171,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="NEE-Mx-zKP"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="updateRating:" destination="cMW-Te-UYK" eventType="valueChanged" id="EHG-uM-HGI"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

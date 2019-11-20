@@ -20,7 +20,8 @@ class ModuleDetailViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var starsButton: UIButton!
+
+    
     
     // MARK: - View lifecycle methods
     
@@ -37,13 +38,34 @@ class ModuleDetailViewController: UIViewController {
         self.title = module.name
     }
     
-    @IBAction func starButtonTapped(_ sender: Any) {
-        starsButton.setImage(UIImage(named: "StarFilled"), for: .normal)
+    @IBAction func updateConfidence(_ confidenceControl: StarRating) {
+        guard let module = module else { return }
+        switch confidenceControl.value {
+        case 2:
+            module.confidence = 2
+        case 3:
+            module.confidence = 3
+        default:
+            module.confidence = 1
+        }
+    }
+    
+    @IBAction func updateRating(_ ratingControl: StarRating) {
+        guard let module = module else { return }
+        switch ratingControl.value {
+        case 2:
+            module.rating = 2
+        case 3:
+            module.rating = 3
+        default:
+            module.rating = 1
+        }
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
         self.navigationController?.popToRootViewController(animated: true)
     }
+    
     
     
     
