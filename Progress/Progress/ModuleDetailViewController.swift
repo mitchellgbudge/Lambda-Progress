@@ -42,7 +42,7 @@ class ModuleDetailViewController: UIViewController {
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {
-        
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     
