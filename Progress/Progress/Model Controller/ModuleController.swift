@@ -17,7 +17,7 @@ class ModuleController {
         decodeJSON()
     }
     
-    func decodeJSON(completion: @escaping ((Error?) -> Void) = { _ in }) {
+    private func decodeJSON(completion: @escaping ((Error?) -> Void) = { _ in }) {
         guard let jsonLocation = Bundle.main.url(forResource: "Modules", withExtension: "json") else {
             NSLog("Error locating JSON file")
             completion(NSError())
@@ -35,7 +35,6 @@ class ModuleController {
             do {
                 moduleReps = try jsonDecoder.decode([ModuleRepresentation].self, from: jsonData)
                 for module in moduleReps {
-                    print(module)
                     Module(moduleRepresentation: module, context: context)
                     CoreDataStack.shared.save(context: context)
                 }
@@ -47,5 +46,4 @@ class ModuleController {
             completion(nil)
         }
     }
-    
 }
