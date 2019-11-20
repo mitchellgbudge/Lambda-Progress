@@ -25,6 +25,20 @@ class ModulesTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        var header = ""
+        switch section {
+        case 0: header = "Swift Fundamentals"
+        default:
+            break
+        }
+        return header
+    }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return moduleController.modules.count
     }
