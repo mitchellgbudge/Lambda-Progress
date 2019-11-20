@@ -18,6 +18,7 @@ class ModulesTableViewController: UITableViewController {
     lazy var fetchedResultsController: NSFetchedResultsController<Module> = {
         let fetchRequest: NSFetchRequest<Module> = Module.fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "sprint", ascending: false)]
+        
         let moc = CoreDataStack.shared.mainContext
         let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: "unit", cacheName: nil)
         frc.delegate = self
@@ -55,7 +56,7 @@ class ModulesTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ModuleCell", for: indexPath) as? ModuleTableViewCell else { return UITableViewCell() }
         let module = fetchedResultsController.object(at: indexPath)
         cell.moduleNameLabel.text = module.name
-        cell.masteryPercentageLabel.text = "\(Int(module.rating))% mastered"
+        cell.masteryPercentageLabel.text = "\(Int(module.mastery))% mastered"
         return cell
     }
 

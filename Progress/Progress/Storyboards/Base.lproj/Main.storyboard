@@ -204,6 +204,8 @@
                     </view>
                     <navigationItem key="navigationItem" title="Module name" id="Lad-3J-sFl"/>
                     <connections>
+                        <outlet property="afternoonProjectStars" destination="Ph9-ZZ-czV" id="rIB-1H-lf9"/>
+                        <outlet property="guidedProjectStars" destination="mSc-xC-vhT" id="Hed-V0-dF0"/>
                         <outlet property="saveButton" destination="91q-lF-Bkf" id="O1k-lZ-TBk"/>
                         <outlet property="tableView" destination="yb7-Ce-lDo" id="6jo-g6-9N4"/>
                     </connections>

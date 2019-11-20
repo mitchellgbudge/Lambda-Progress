@@ -20,7 +20,9 @@ class ModuleDetailViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var saveButton: UIButton!
-
+    @IBOutlet weak var guidedProjectStars: StarRating!
+    @IBOutlet weak var afternoonProjectStars: StarRating!
+    
     
     
     // MARK: - View lifecycle methods
@@ -36,6 +38,8 @@ class ModuleDetailViewController: UIViewController {
         guard isViewLoaded,
             let module = module else { return }
         self.title = module.name
+        guidedProjectStars.value = Int(module.confidence)
+        afternoonProjectStars.value = Int(module.rating)
     }
     
     @IBAction func updateConfidence(_ confidenceControl: StarRating) {
@@ -62,7 +66,21 @@ class ModuleDetailViewController: UIViewController {
         }
     }
     
+    private func calculateMastery() -> Double {
+        guard let module = module else { return 0 }
+        if module.confidence >= 2 && module.rating >= 2 {
+            module.mastery = 100
+        } else if module.confidence >= 2 && module.rating < 2 {
+            module.mastery = 50
+        } else if module.confidence < 2 && module.rating >= 2 {
+            module.mastery = 50
+        }
+        return module.mastery
+    }
+    
     @IBAction func saveButtonPressed(_ sender: Any) {
+        guard let module = module else { return }
+        moduleController?.updateModule(module: module, confidence: module.confidence, rating: module.rating, mastery: calculateMastery())
         self.navigationController?.popToRootViewController(animated: true)
     }
     

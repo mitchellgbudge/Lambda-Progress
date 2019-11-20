@@ -19,6 +19,7 @@ extension UIView {
                    completion: { _ in UIView.animate(withDuration: 0.1) { unflare() }})
   }
 }
+
 class StarRating: UIControl {
   
   var value: Int = 1

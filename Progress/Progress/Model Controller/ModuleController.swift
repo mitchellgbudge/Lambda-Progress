@@ -11,6 +11,10 @@ import CoreData
 
 class ModuleController {
     
+    // MARK: - Properties
+    
+    
+    
     // MARK: - Methods
     
     init() {
@@ -30,13 +34,17 @@ class ModuleController {
         }
         var moduleReps: [ModuleRepresentation] = []
         let jsonDecoder = JSONDecoder()
+        let fetchRequest: NSFetchRequest<Module> = Module.fetchRequest()
         let context = CoreDataStack.shared.container.newBackgroundContext()
         context.performAndWait {
             do {
                 moduleReps = try jsonDecoder.decode([ModuleRepresentation].self, from: jsonData)
-                for module in moduleReps {
-                    Module(moduleRepresentation: module, context: context)
-                    CoreDataStack.shared.save(context: context)
+                let existingModules = try context.fetch(fetchRequest)
+                if existingModules == [Module]() {
+                    for module in moduleReps {
+                        Module(moduleRepresentation: module, context: context)
+                        CoreDataStack.shared.save(context: context)
+                    }
                 }
             } catch {
                 NSLog("Error decoding JSON data: \(error)")
@@ -45,5 +53,12 @@ class ModuleController {
             }
             completion(nil)
         }
+    }
+    
+    func updateModule(module: Module, confidence: Double, rating: Double, mastery: Double) {
+        module.confidence = confidence
+        module.rating = rating
+        module.mastery = mastery
+        CoreDataStack.shared.save()
     }
 }
