@@ -11,7 +11,7 @@ import UIKit
 class ModuleDetailViewController: UIViewController {
     
     // MARK: - Properties & outlets
-    var module: ModuleRepresentation? {
+    var module: Module? {
         didSet {
             updateViews()
         }

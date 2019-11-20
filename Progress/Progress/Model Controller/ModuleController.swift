@@ -25,6 +25,7 @@ class ModuleController {
         do {
             let downloadedModules = try jsonDecoder.decode([ModuleRepresentation].self, from: jsonData)
             modules = downloadedModules
+            CoreDataStack.shared.save()
         } catch {
             NSLog("Error decoding JSON data: \(error)")
             return
