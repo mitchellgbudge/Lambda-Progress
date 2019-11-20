@@ -59,6 +59,8 @@ extension ModuleDetailViewController: UITableViewDelegate, UITableViewDataSource
         guard let module = module,
             let objectives = module.objectives else { return UITableViewCell() }
         let objective = objectives[indexPath.row]
+        cell.textLabel?.numberOfLines = 0
+        cell.textLabel?.lineBreakMode = .byWordWrapping
         cell.objectiveLabel.text = objective
         return cell
     }
