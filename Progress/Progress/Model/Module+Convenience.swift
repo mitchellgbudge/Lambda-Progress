@@ -15,7 +15,7 @@ extension Module {
                                         unit: String,
                                         objectives: [String],
                                         mastery: Double = 0,
-                                        sprint: Int16,
+                                        sprint: Double,
                                         confidence: Double = 1.0,
                                         rating: Double = 1.0,
                                         identifier: String = UUID().uuidString,
@@ -31,6 +31,22 @@ extension Module {
         self.identifier = identifier
     }
     
-    // TODO: - Add Module representation convenience init
+    @discardableResult convenience init?(moduleRepresentation: ModuleRepresentation, context: NSManagedObjectContext) {
+        
+        guard let name = moduleRepresentation.name,
+            let unit = moduleRepresentation.unit,
+            let objectives = moduleRepresentation.objectives,
+            let mastery = moduleRepresentation.mastery,
+            let sprint = moduleRepresentation.sprint,
+            let confidence = moduleRepresentation.confidence,
+            let rating = moduleRepresentation.rating,
+            let identifier = moduleRepresentation.identifier else { return nil }
+        
+        self.init(name: name, unit: unit, objectives: objectives, mastery: mastery, sprint: sprint, confidence: confidence, rating: rating, identifier: identifier, context: context)
+    }
+    
+    var moduleRepresentation: ModuleRepresentation {
+        return ModuleRepresentation(name: name, unit: unit, objectives: objectives, mastery: mastery, sprint: sprint, confidence: confidence, rating: rating, identifier: identifier)
+    }
     
 }

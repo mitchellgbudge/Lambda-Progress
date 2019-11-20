@@ -7,31 +7,45 @@
 //
 
 import Foundation
+import CoreData
 
 class ModuleController {
     
-    var modules: [ModuleRepresentation] = []
+    // MARK: - Methods
     
-    func decodeJSON() {
-        guard let jsonLocation = Bundle.main.url(forResource: "Modules", withExtension: "json") else {
-            // TODO: - improve error handling
-            fatalError()
-        }
-        guard let jsonData = try? Data(contentsOf: jsonLocation) else {
-           // TODO: - improve error handling
-            fatalError()
-        }
-        let jsonDecoder = JSONDecoder()
-        do {
-            let downloadedModules = try jsonDecoder.decode([ModuleRepresentation].self, from: jsonData)
-            modules = downloadedModules
-            CoreDataStack.shared.save()
-        } catch {
-            NSLog("Error decoding JSON data: \(error)")
-            return
-        }
+    init() {
+        decodeJSON()
     }
     
-    // TODO: - add update method
+    func decodeJSON(completion: @escaping ((Error?) -> Void) = { _ in }) {
+        guard let jsonLocation = Bundle.main.url(forResource: "Modules", withExtension: "json") else {
+            NSLog("Error locating JSON file")
+            completion(NSError())
+            return
+        }
+        guard let jsonData = try? Data(contentsOf: jsonLocation) else {
+            NSLog("No data returned from json file")
+            completion(NSError())
+            return
+        }
+        var moduleReps: [ModuleRepresentation] = []
+        let jsonDecoder = JSONDecoder()
+        let context = CoreDataStack.shared.container.newBackgroundContext()
+        context.performAndWait {
+            do {
+                moduleReps = try jsonDecoder.decode([ModuleRepresentation].self, from: jsonData)
+                for module in moduleReps {
+                    print(module)
+                    Module(moduleRepresentation: module, context: context)
+                    CoreDataStack.shared.save(context: context)
+                }
+            } catch {
+                NSLog("Error decoding JSON data: \(error)")
+                completion(error)
+                return
+            }
+            completion(nil)
+        }
+    }
     
 }

@@ -12,7 +12,9 @@ import CoreData
 class ModulesTableViewController: UITableViewController {
 
     // MARK: - Properties
+    
     let moduleController = ModuleController()
+    
     lazy var fetchedResultsController: NSFetchedResultsController<Module> = {
         let fetchRequest: NSFetchRequest<Module> = Module.fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "sprint", ascending: false)]
@@ -27,8 +29,6 @@ class ModulesTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        moduleController.decodeJSON()
-        tableView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
