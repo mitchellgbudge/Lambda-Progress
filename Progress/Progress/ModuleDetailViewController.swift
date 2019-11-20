@@ -19,9 +19,8 @@ class ModuleDetailViewController: UIViewController {
     var moduleController: ModuleController?
     
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var guidedStarsButton: UIButton!
-    @IBOutlet weak var afternoonStarsButton: UIButton!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var starsButton: UIButton!
     
     // MARK: - View lifecycle methods
     
@@ -36,6 +35,10 @@ class ModuleDetailViewController: UIViewController {
         guard isViewLoaded,
             let module = module else { return }
         self.title = module.name
+    }
+    
+    @IBAction func starButtonTapped(_ sender: Any) {
+        starsButton.setImage(UIImage(named: "StarFilled"), for: .normal)
     }
     
     @IBAction func saveButtonPressed(_ sender: Any) {

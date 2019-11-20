@@ -13,13 +13,14 @@ class ObjectiveTableViewCell: UITableViewCell {
     // MARK: - Outlets
     
     @IBOutlet weak var objectiveLabel: UILabel!
+    @IBOutlet weak var starButton: UIButton!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    
+    // MARK: - Actions
+    
+    @IBAction func starButtonTapped(_ sender: Any) {
+        starButton.setImage(UIImage(named: "StarFilled"), for: .normal)
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
+    
 
 }

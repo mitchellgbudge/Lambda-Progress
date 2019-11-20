@@ -3,27 +3,54 @@
     "name": "Swift Fundamentals I",
     "unit": "Swift Fundamentals",
     "objectives": [
-      "be able to identify use and understand the difference between the basic data types: `Int` `Double` `Bool` `String`",
-      "be able to understand how to apply mutability to variables (`let` vs. `var`)",
-      "be able to use conditional logic to execute various code paths",
-      "be able to iterate over an array using a loop to accomplish some task",
-      "be able to understand how braces `{}` are used to group code into blocks and how scope affects the lifespan of a variable"
+      "Be able to identify use and understand the difference between the basic data types: `Int` `Double` `Bool` `String`",
+      "Be able to understand how to apply mutability to variables (`let` vs. `var`)",
+      "Be able to use conditional logic to execute various code paths",
+      "Be able to iterate over an array using a loop to accomplish some task",
+      "Be able to understand how braces `{}` are used to group code into blocks and how scope affects the lifespan of a variable"
     ],
     "sprint": 1
   },
   {
     "name": "iOS Development Tools",
     "unit": "Swift Fundamentals",
+    "objectives": [
+      "Be able to understand and explain version control",
+      "Be able to configure a git identity and default editor on a computer",
+      "Be able to create a fork on GitHub",
+      "Be able to clone a remote Git repository",
+      "Be able to commit changes to a Git repository and write good commit messages",
+      "Be able to push changes to a remote Git repository",
+      "Be able to create a pull request on GitHub"
+    ],
     "sprint": 1
   },
   {
     "name": "Swift Fundamentals II",
     "unit": "Swift Fundamentals",
+    "objectives": [
+      "Be able to define custom types using class, struct, and enum",
+      "Be able to show and explain the difference between value types vs. reference types",
+      "Be able to create custom initializers",
+      "Be able to understand and explain the difference between a method and a function",
+      "Be able to understand and explain the purpose of optionals",
+      "Be able to use an if let statement to unwrap an optional variable",
+      "Be able to force unwrap an optional type and understand the potential dangers and benefits"
+    ],
     "sprint": 1
   },
   {
     "name": "Swift Fundamentals III",
     "unit": "Swift Fundamentals",
+    "objectives": [
+      "Be able to use a guard let statement to early exit",
+      "Be able to use the nil coalescing operator to provide a default value when an expression is nil",
+      "Be able to use optional chaining to short circuit evaluation when a value is nil",
+      "Be able to use class inheritance and composition",
+      "Be able to downcast types from super classes to subclasses using `as?` or `as!`",
+      "Be able to convert user input from `String` into a number from a `UITextField`",
+      "Be able to walk through an app using a breakpoint and explain flow control"
+    ],
     "sprint": 1
   }
 ]

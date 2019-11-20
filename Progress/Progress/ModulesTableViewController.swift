@@ -47,11 +47,7 @@ class ModulesTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ModuleCell", for: indexPath) as? ModuleTableViewCell else { return UITableViewCell() }
         let module = moduleController.modules[indexPath.row]
         cell.moduleNameLabel.text = module.name
-        if module.mastery == true {
-            cell.masteryPercentageLabel.text = "100% mastered"
-        } else {
-            cell.masteryPercentageLabel.text = "0% mastered"
-        }
+        cell.masteryPercentageLabel.text = "\(Int(module.mastery ?? 0))% mastered"
         return cell
     }
 

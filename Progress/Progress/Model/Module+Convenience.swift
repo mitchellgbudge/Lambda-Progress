@@ -14,7 +14,7 @@ extension Module {
     @discardableResult convenience init(name: String,
                                         unit: String,
                                         objectives: [String],
-                                        mastery: Bool = false,
+                                        mastery: Double = 0,
                                         sprint: Int16,
                                         confidence: Double = 1.0,
                                         rating: Double = 1.0,
