@@ -10,7 +10,7 @@ import UIKit
 
 class ObjectiveTableViewCell: UITableViewCell {
 
-    // MARK: - Outlets
+    // MARK: - Outlets and properties
     
     @IBOutlet weak var objectiveLabel: UILabel!
     @IBOutlet weak var starButton: UIButton!
@@ -21,6 +21,7 @@ class ObjectiveTableViewCell: UITableViewCell {
     @IBAction func starButtonTapped(_ sender: Any) {
         starButton.setImage(UIImage(named: "StarFilled"), for: .normal)
     }
+    
     
 
 }

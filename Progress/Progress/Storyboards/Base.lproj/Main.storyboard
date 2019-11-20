@@ -10,13 +10,13 @@
         <!--iOS Core-->
         <scene sceneID="UQ0-PK-s8k">
             <objects>
-                <tableViewController id="Fl8-Wy-J3c" customClass="ModulesTableViewController" customModule="Progress" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Fl8-Wy-J3c" customClass="ModulesTableViewController" customModule="LambdaProgress" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="QCG-mN-MMQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ModuleCell" id="zaB-8h-gJE" customClass="ModuleTableViewCell" customModule="Progress" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ModuleCell" id="zaB-8h-gJE" customClass="ModuleTableViewCell" customModule="LambdaProgress" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zaB-8h-gJE" id="WN0-gN-gXe">
@@ -71,7 +71,7 @@
         <!--Module name-->
         <scene sceneID="eSB-A6-b5k">
             <objects>
-                <viewController id="cMW-Te-UYK" customClass="ModuleDetailViewController" customModule="Progress" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cMW-Te-UYK" customClass="ModuleDetailViewController" customModule="LambdaProgress" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RB2-nl-3hw">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,7 +88,7 @@
                                     <constraint firstAttribute="height" constant="260" id="OJM-Ec-MpU"/>
                                 </constraints>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ObjectiveCell" rowHeight="70" id="mjI-Ft-oGs" customClass="ObjectiveTableViewCell" customModule="Progress" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ObjectiveCell" rowHeight="70" id="mjI-Ft-oGs" customClass="ObjectiveTableViewCell" customModule="LambdaProgress" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mjI-Ft-oGs" id="gkB-Nn-FJ1">
@@ -107,7 +107,9 @@
                                                         <constraint firstAttribute="width" constant="30" id="lED-az-F2l"/>
                                                         <constraint firstAttribute="height" constant="30" id="rWp-33-xnh"/>
                                                     </constraints>
-                                                    <state key="normal" image="Star"/>
+                                                    <state key="normal" image="Star">
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
                                                     <connections>
                                                         <action selector="starButtonTapped:" destination="mjI-Ft-oGs" eventType="touchUpInside" id="qhi-FY-aOb"/>
                                                     </connections>
@@ -147,7 +149,7 @@
                                     <action selector="saveButtonPressed:" destination="cMW-Te-UYK" eventType="touchUpInside" id="f13-bS-jR9"/>
                                 </connections>
                             </button>
-                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="mSc-xC-vhT" customClass="StarRating" customModule="Progress" customModuleProvider="target">
+                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="mSc-xC-vhT" customClass="StarRating" customModule="LambdaProgress" customModuleProvider="target">
                                 <rect key="frame" x="100" y="520" width="264" height="70"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -160,7 +162,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ph9-ZZ-czV" customClass="StarRating" customModule="Progress" customModuleProvider="target">
+                            <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ph9-ZZ-czV" customClass="StarRating" customModule="LambdaProgress" customModuleProvider="target">
                                 <rect key="frame" x="100" y="636" width="264" height="70"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
