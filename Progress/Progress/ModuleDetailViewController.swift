@@ -29,10 +29,11 @@ class ModuleDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setTheme()
         updateViews()
     }
     
-    // MARK: - Actions
+    // MARK: - Actions & methods
     
     func updateViews() {
         guard isViewLoaded,
@@ -89,6 +90,8 @@ class ModuleDetailViewController: UIViewController {
     
 }
 
+// MARK: - Table view data source
+
 extension ModuleDetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let module = module,
@@ -107,4 +110,13 @@ extension ModuleDetailViewController: UITableViewDelegate, UITableViewDataSource
         cell.objectiveLabel.text = objective
         return cell
     }
+}
+
+
+extension ModuleDetailViewController {
+    
+    func setTheme() {
+        
+    }
+    
 }

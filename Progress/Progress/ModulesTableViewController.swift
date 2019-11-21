@@ -56,7 +56,7 @@ class ModulesTableViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ModuleCell", for: indexPath) as? ModuleTableViewCell else { return UITableViewCell() }
         let module = fetchedResultsController.object(at: indexPath)
         cell.moduleNameLabel.text = module.name
-        cell.masteryPercentageLabel.text = "\(Int(module.mastery))% mastered"
+        cell.masteryPercentageLabel.text = "\(Int(module.mastery))%"
         return cell
     }
 

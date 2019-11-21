@@ -544,7 +544,7 @@
     "sprint": 15
   },
   {
-    "name": "Cocoa Design Patters in Objective-C",
+    "name": "Cocoa Design Patterns in Objective-C",
     "unit": "Objective-C Part 2",
     "objectives": [
        "Be able to use NSError and pass by reference for error handling in Objective-C",

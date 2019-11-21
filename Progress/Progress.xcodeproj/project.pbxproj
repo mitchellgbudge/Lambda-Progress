@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6EAE62802386FA8A00189EA1 /* ThemeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAE627F2386FA8A00189EA1 /* ThemeHelper.swift */; };
+		6EAE62822386FB7100189EA1 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EAE62812386FB7100189EA1 /* Lato-Regular.ttf */; };
 		6EB6D6A92384F22700E91174 /* StarRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB6D6A82384F22700E91174 /* StarRating.swift */; };
 		6ED5A08523831A75006932F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5A08423831A75006932F1 /* AppDelegate.swift */; };
 		6ED5A08723831A75006932F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5A08623831A75006932F1 /* SceneDelegate.swift */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6EAE627F2386FA8A00189EA1 /* ThemeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeHelper.swift; sourceTree = "<group>"; };
+		6EAE62812386FB7100189EA1 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		6EB6D6A82384F22700E91174 /* StarRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRating.swift; sourceTree = "<group>"; };
 		6ED5A08123831A75006932F1 /* LambdaProgress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LambdaProgress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ED5A08423831A75006932F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				6EB6D6A82384F22700E91174 /* StarRating.swift */,
+				6EAE627F2386FA8A00189EA1 /* ThemeHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -184,6 +189,7 @@
 				6ED5A08423831A75006932F1 /* AppDelegate.swift */,
 				6ED5A08623831A75006932F1 /* SceneDelegate.swift */,
 				6ED5A09023831A77006932F1 /* Assets.xcassets */,
+				6EAE62812386FB7100189EA1 /* Lato-Regular.ttf */,
 				6ED5A09523831A77006932F1 /* Info.plist */,
 			);
 			path = Resources;
@@ -323,6 +329,7 @@
 			files = (
 				6ED5A09423831A77006932F1 /* LaunchScreen.storyboard in Resources */,
 				6ED5A0CE2384671C006932F1 /* Modules.json in Resources */,
+				6EAE62822386FB7100189EA1 /* Lato-Regular.ttf in Resources */,
 				6ED5A09123831A77006932F1 /* Assets.xcassets in Resources */,
 				6ED5A08C23831A75006932F1 /* Main.storyboard in Resources */,
 			);
@@ -356,6 +363,7 @@
 				6ED5A0C623834F44006932F1 /* ModuleController.swift in Sources */,
 				6ED5A0BE23832330006932F1 /* ObjectiveTableViewCell.swift in Sources */,
 				6ED5A0CC23835F5D006932F1 /* Module+Convenience.swift in Sources */,
+				6EAE62802386FA8A00189EA1 /* ThemeHelper.swift in Sources */,
 				6ED5A0CA23835EE3006932F1 /* CoreDataStack.swift in Sources */,
 				6ED5A0C823834F4E006932F1 /* CareerController.swift in Sources */,
 				6ED5A0C0238324EB006932F1 /* ModuleTableViewCell.swift in Sources */,
