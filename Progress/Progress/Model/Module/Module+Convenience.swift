@@ -51,12 +51,28 @@ extension Module {
             let confidence = module.confidence,
             let rating = module.rating,
             let identifier = module.identifier else { return nil }
-        
-        self.init(name: name, unit: unit, objectives: objectives, objectiveMastery: objectiveMastery, mastery: mastery, sprint: sprint, confidence: confidence, rating: rating, identifier: identifier, context: context)
+        self.init(name: name,
+                  unit: unit,
+                  objectives: objectives,
+                  objectiveMastery: objectiveMastery,
+                  mastery: mastery,
+                  sprint: sprint,
+                  confidence: confidence,
+                  rating: rating,
+                  identifier: identifier,
+                  context: context)
     }
     
     var moduleRepresentation: ModuleRepresentation {
-        return ModuleRepresentation(name: name, unit: unit, objectives: objectives, objectiveMastery: objectiveMastery, sprint: sprint, mastery: mastery, confidence: confidence, rating: rating, identifier: identifier)
+        return ModuleRepresentation(name: name,
+                                    unit: unit,
+                                    objectives: objectives,
+                                    objectiveMastery: objectiveMastery,
+                                    sprint: sprint,
+                                    mastery: mastery,
+                                    confidence: confidence,
+                                    rating: rating,
+                                    identifier: identifier)
     }
     
 }

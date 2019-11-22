@@ -32,7 +32,6 @@ class CareerDetailViewController: UIViewController {
     }
     
     // MARK: - Methods
-    
     func updateViews() {
         guard isViewLoaded,
             let career = career else { return }
@@ -40,7 +39,6 @@ class CareerDetailViewController: UIViewController {
         assignmentTextView.text = career.assignment
         infoTextView.text = career.info
     }
-    
     @IBAction func saveButtonPressed(_ sender: Any) {
         guard let career = career else { return }
         career.completed = true
@@ -54,7 +52,4 @@ class CareerDetailViewController: UIViewController {
         saveButton.layer.cornerRadius = 10.0
         saveButton.layer.borderColor = ThemeHelper.lambdaRed.cgColor
     }
-    
 }
-
-

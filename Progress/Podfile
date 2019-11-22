@@ -1,0 +1,19 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Progress' do
+  pod 'SwiftLint'
+  use_frameworks!
+
+  # Pods for Progress
+
+  target 'ProgressTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'ProgressUITests' do
+    # Pods for testing
+  end
+
+end

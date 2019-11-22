@@ -19,4 +19,3 @@ struct ModuleRepresentation: Codable {
     var rating: Double?
     var identifier: String?
 }
-
