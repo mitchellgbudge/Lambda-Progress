@@ -52,6 +52,506 @@
       "Be able to walk through an app using a breakpoint and explain flow control"
     ],
     "sprint": 1
+  },
+  {
+    "name": "Navigation Controller",
+    "unit": "iOS Fundamentals I",
+    "objectives": [
+      "Be able to use UINavigationController to display data hierarchically",
+      "Be able to implement a segue between a table view cell and a detail view controller",
+      "Be able to understand and implement the `prepare(for segue` method"
+    ],
+    "sprint": 2
+  },
+  {
+    "name": "Auto Layout",
+    "unit": "iOS Fundamentals I",
+    "objectives": [
+        "Be able to understand and explain what Auto Layout is, and the problems it solves",
+      "Be able to implement common layouts using constraints in Interface Builder",
+      "Be able to implement common layouts using UIStackView"
+    ],
+    "sprint": 2
+  },
+  {
+    "name": "Protocols",
+    "unit": "iOS Fundamentals I",
+    "objectives": [
+        "Be able to understand and explain what a protocol is and common scenarios for their use",
+        "Be able define a custom protocol, and make a class or struct conform to it"
+    ],
+    "sprint": 2
+  },
+  {
+    "name": "The Delegation Design Pattern",
+    "unit": "iOS Fundamentals I",
+    "objectives": [
+        "Be able use a segue to show a detail view when a table view cell is tapped",
+        "Be able to use a regular UIViewController to display a UITableView",
+        "Be able to understand and explain the delegate pattern and why it is used",
+        "Be able to create a custom UITableViewCell"
+    ],
+    "sprint": 2
+  },
+  {
+    "name": "Tabbed Navigation and Multiple Storyboards",
+    "unit": "iOS Fundamentals II",
+    "objectives": [
+       "Be able to use storyboard references to separate UI into multiple storyboards",
+        "Be able to use UITabBarController to allow user to switch between multiple view controllers"
+    ],
+    "sprint": 3
+  },
+  {
+    "name": "Basic Persistence",
+    "unit": "iOS Fundamentals II",
+    "objectives": [
+       "Be able to understand and explain the role of model objects and model controllers in MVC",
+       "Be able to make a class or struct conform to Codable",
+       "Be able to use FileManager to find system directories (e.g. documents directory)",
+       "Be able to use PropertyListEncoder to save Codable objects to a file"
+    ],
+    "sprint": 3
+  },
+  {
+    "name": "Alert Controllers, Picker Views, and Timers",
+    "unit": "iOS Fundamentals II",
+    "objectives": [
+       "Be able to use a Timer to do something at a specified time in the future",
+       "Be able to use a UIPickerView to allow user to select from a list of items",
+       "Be able to create and present a UIAlertController"
+    ],
+    "sprint": 3
+  },
+  {
+    "name": "UICollection View and User Defaults",
+    "unit": "iOS Fundamentals II",
+    "objectives": [
+       "Be able to understand and explain what a collection view is along with common scenarios for its use",
+       "Be able to implement UICollectionViewDataSource methods to populate a collection view from model data",
+       "Be able to implement and customize basic layouts using UICollectionViewFlowLayout",
+       "Be able to implement custom UICollectionViewCells",
+       "Be able to implement UICollectionViewDelegate method to react to selecting a collection view cell",
+       "Be able to understand and explain the purpose of UserDefaults and the kind of information it should be used to store",
+       "Be able to define keys for specific values stored in UserDefaults",
+       "Be able to use UserDefaults to store and retrieve preferences"
+    ],
+    "sprint": 3
+  },
+  {
+    "name": "Intro to GCD and Closures",
+    "unit": "iOS Networking Basics",
+    "objectives": [
+       "Be able to understand and explain what a closure is and common scenarios for their use",
+       "Be able to understand and use Swift’s closure syntax",
+       "Be able to use sort, filter, map, compactMap, and reduce",
+       "Be able to understand and explain what concurrency is, and reasons why it is used",
+       "Be able to use GCD APIs to dispatch work to another queue",
+       "Be able to understand and explain the role of the main queue in iOS apps"
+    ],
+    "sprint": 4
+  },
+  {
+    "name": "REST Basics and Enums",
+    "unit": "iOS Networking Basics",
+    "objectives": [
+       "Be able to understand and explain the purpose of JSON",
+       "Be able to use documentation to understand how to use a REST API",
+       "Be able to use URLSession to make a GET request to a URL",
+       "Be able to implement a URLSessionDataTask completion closure",
+       "Be able to use JSONDecoder() to convert JSON data returned by an API into model objects",
+       "Be able to understand and explain common use cases for enums",
+       "Be able to define custom enum types"
+    ],
+    "sprint": 4
+  },
+  {
+    "name": "API Authentication with Account Signup and Login",
+    "unit": "iOS Networking Basics",
+    "objectives": [
+       "Be able to differentiate between GET and POST requests, and use a URLSessionDataTask to send either type",
+       "Be able to encode native Swift objects as JSON using a JSONEncoder"
+    ],
+    "sprint": 4
+  },
+  {
+    "name": "GET and POST Requests with Basic Authentication",
+    "unit": "iOS Networking Basics",
+    "objectives": [
+       "Be able to understand the use of, and work with a bearer token to provide authenticated requests against an API",
+       "Be able to demonstrate ability to use the `Result` type from Swift 5 to provide more relevant error handling"
+    ],
+    "sprint": 4
+  },
+  {
+    "name": "Programmatic Constraints",
+    "unit": "iOS User Interface",
+    "objectives": [
+       "Be able to understand and explain how Auto Layout constraints work",
+       
+       "Be able to create autolayout constraints programmatically using the NSLayoutConstraint API",
+       "Be able to create autolayout constraints programmatically using the NSLayoutAnchor API"
+    ],
+    "sprint": 5
+  },
+  {
+    "name": "View Animations",
+    "unit": "iOS User Interface",
+    "objectives": [
+       "Be able to understand and explain the 'rules of animation'",
+       "Be able to use UIView’s support for simple system animations",
+       "Be able to use UIView’s animation block methods to animate simple view property changes",
+       "Be able to use CABasicAnimation to animate layer properties"
+    ],
+    "sprint": 5
+  },
+  {
+    "name": "View Drawing",
+    "unit": "iOS User Interface",
+    "objectives": [
+       "Be able to use a `CADisplayLink` to coordinate animations with the refresh rate of the device display",
+       "Be able to better understand the `draw(_:)` method for custom drawing with Core Graphics",
+       "Be able to use `IBDesignable` to preview custom controls in the storyboard"
+    ],
+    "sprint": 5
+  },
+  {
+    "name": "iOS Custom Controls",
+    "unit": "iOS User Interface",
+    "objectives": [
+       "Be able to understand and explain the target action pattern",
+       "Be able to subclass UIControl to create a custom control",
+       "Be able to implement custom touch handling by overriding the touch handling methods",
+       "Be able to use CoreGraphics to do custom drawing"
+    ],
+    "sprint": 5
+  },
+  {
+    "name": "Core Data I - Basics",
+    "unit": "Core Data",
+    "objectives": [
+       "Be able to understand and explain the role of each component in the Core Data Stack",
+       "Be able to use Xcode to create and edit Core Data model files",
+       "Be able to use NSPersistentContainer to set up the Core Data stack in an app",
+       "Be able to initialize and create Core Data managed objects",
+       "Be able to fetch objects using NSFetchRequest",
+       "Be able to save data to disk using the managed object context",
+       "Be able to delete managed objects"
+    ],
+    "sprint": 6
+  },
+  {
+    "name": "Core Data II - Migration and Fetching",
+    "unit": "Core Data",
+    "objectives": [
+       "Be able to use lightweight migration to migrate an older Core Data store to a newer version",
+       "Be able to use NSFetchedResultsController to create a table view populated with Core Data objects"
+    ],
+    "sprint": 6
+  },
+  {
+    "name": "Core Data III - Sync Persistence",
+    "unit": "Core Data",
+    "objectives": [
+       "Be able to send persisted managed object data to a server via PUT",
+       "Be able to use NSPredicate to fetch objects matching specific criteria",
+       "Be able to sync server modifications with local persistences"
+    ],
+    "sprint": 6
+  },
+  {
+    "name": "Core Data IV - Multiple Contexts and Concurrency",
+    "unit": "Core Data",
+    "objectives": [
+       "Be able to understand and explain common scenarios where using multiple managed object contexts is appropriate",
+       "Be able to implement the shared persistent store coordinator multiple MOC stack",
+       "Be able to use multiple MOCs with a parent/child relationship",
+       "Be able to use NSPersistentContainer’s support for creating new background contexts",
+       "Be able to correctly use Core Data’s API for concurrency"
+    ],
+    "sprint": 6
+  },
+  {
+    "name": "Intermediate Codable",
+    "unit": "Intermediate Swift",
+    "objectives": [
+       "Be able to understand and explain Codable's data types",
+       "Be able to implement encode(to:) and init(from:) methods to customize encoding and decoding",
+       "Be able to use a custom init(from:) method to decode objects whose properties contain both the key and value from a json dictionary"
+    ],
+    "sprint": 7
+  },
+  {
+    "name": "Swift Generics",
+    "unit": "Intermediate Swift",
+    "objectives": [
+       "Be able to write functions with a generic type that work with any type",
+       "Be able to use generics to create types",
+       "Be able to use generic constraints to restrict the types that can be used with a generic function",
+       "Be able to use generic beautification to simplify generic functions and locate them to a natural type or protocol extension"
+    ],
+    "sprint": 7
+  },
+  {
+    "name": "Concurrency I - Fundamentals",
+    "unit": "Intermediate Swift",
+    "objectives": [
+       "Be able to understand and explain what concurrency means, and common scenarios where it is appropriate",
+       "Be able to understand and explain what a race condition is",
+       "Be able to understand and use mutexes to prevent race conditions",
+       "Be able to understand and explain what a deadlock is"
+    ],
+    "sprint": 7
+  },
+  {
+    "name": "Concurrency II - iOS Concurrency",
+    "unit": "Intermediate Swift",
+    "objectives": [
+       "Be able to set up dependencies between operations",
+       "Be able to cancel an operation",
+       "Be able to implement a custom subclass of NSOperation",
+       "Be able to use GCD to implement thread safe properties in Swift",
+       "Be able to understand and explain the difference between a GCD queue and a thread"
+    ],
+    "sprint": 7
+  },
+  {
+    "name": "Debugging I - Basic Debugging Tools",
+    "unit": "iOS Code Quality",
+    "objectives": [
+       "Be able to set breakpoints in code",
+       "Be able to use the Xcode debugger’s single step tools to move through code being debugged",
+       "Be able to use Xcode’s variables view and hover feature to inspect the current value of variables",
+       "Be able to use the LLDB command line to inspect variables with 'po'",
+       "Be able to implement description and debugDescription to provide better descriptions of custom types",
+       "Be able to debug exceptions using an exception breakpoint",
+       "Be able to use breakpoint actions to print information without modifying source code"
+    ],
+    "sprint": 8
+  },
+  {
+    "name": "Debugging II - Instruments",
+    "unit": "iOS Code Quality",
+    "objectives": [
+       "Be able to understand and explain the purpose of Instruments and the problems it helps solve",
+       "Be able to use Instruments’ Time Profiler instrument to understand slowness in an application",
+       "Be able to use Instruments’ Allocations instrument to determine the cause of high memory usage"
+    ],
+    "sprint": 8
+  },
+  {
+    "name": "Unit Testing I - Intro to Unit Testing",
+    "unit": "iOS Code Quality",
+    "objectives": [
+       "Be able to understand and explain the purpose of unit testing",
+       "Be able to add a test target to their existing app",
+       "Be able to implement unit tests using XCTestCase",
+       "Be able to use XCAssert functions to test whether code is working correctly",
+       "Be able to run unit tests in Xcode"
+    ],
+    "sprint": 8
+  },
+  {
+    "name": "Unit Testing II - UI Testing",
+    "unit": "iOS Code Quality",
+    "objectives": [
+       "Be able to understand and explain the purpose of UI Testing",
+       "Be able to add a UI test target to an existing app",
+       "Be able to record UI tests using Xcode’s recording feature",
+       "Be able to clean up recorded code",
+       "Be able to add accessibility identifiers to UI elements to improve testability",
+       "Be able to use assertions to test for expected UI behavior",
+       "Be able to use expectations and the wait API to wait for UI elements to appear or change"
+    ],
+    "sprint": 8
+  },
+  {
+    "name": "Unit Testing III - Dependency Injection and Mocking",
+    "unit": "Modularity",
+    "objectives": [
+       "Be able to write types and functions that support dependency injection for testing",
+       "Be able to use protocol oriented programming to create mocks for testing code with complex dependencies",
+       "Be able to use expectations to test asynchronous code"
+    ],
+    "sprint": 9
+  },
+  {
+    "name": "Third Party Libraries and Dependency Management",
+    "unit": "Modularity",
+    "objectives": [
+       "Be able to understand and explain the benefits and drawbacks to using third party libraries",
+       "Be able to understand and explain how to evaluate third party libraries for quality",
+       "Be able to use Carthage to include a third-party library in a project",
+       "Be able to use CocoaPods to include a third-party library in a project",
+       "Be able to use Git submodules to include a third-party library in a project",
+       "Be able to include sub-projects with a framework in an Xcode app project",
+       "Be able to understand and explain the advantages and disadvantages of submodules, CocoaPods, and Carthage"
+    ],
+    "sprint": 9
+  },
+  {
+    "name": "Creating Frameworks",
+    "unit": "Modularity",
+    "objectives": [
+       "Be able to create a framework for sharing code between multiple apps",
+       "Be able to include sub-projects with a framework in an Xcode app project",
+       "Be able to use Swift’s access control modifiers appropriately to make code private, internal, or public",
+       "Be able to make good decisions about abstraction, API surface, and modularity when creating a framework"
+    ],
+    "sprint": 9
+  },
+  {
+    "name": "Cocoa Design Patterns",
+    "unit": "Modularity",
+    "objectives": [
+       "Be able to understand and explain what a design pattern is and why they’re useful",
+       "Be able to explain and use the singleton design pattern, including understanding its drawbacks",
+       "Be able to explain and use the facade design pattern",
+       "Be able to explain and use notifications",
+       "Be able to explain and use the memento pattern via state restoration"
+    ],
+    "sprint": 9
+  },
+  {
+    "name": "Core Image",
+    "unit": "iOS Media Programming",
+    "objectives": [
+       "Be able to use the documentation to find and understand available Core Image filters",
+       "Be able to convert between UIImage and CIImage",
+       "Be able to apply Core Image filters to images",
+       "Be able to connect UI controls to Core Image filter settings"
+    ],
+    "sprint": 10
+  },
+  {
+    "name": "iOS Audio",
+    "unit": "iOS Media Programming",
+    "objectives": [
+       "Be able to play audio using AVAudioPlayer",
+       "Be able to record audio using AVAudioRecorder",
+       "Be able to store audio on disk efficiently"
+    ],
+    "sprint": 10
+  },
+  {
+    "name": "iOS Video",
+    "unit": "iOS Media Programming",
+    "objectives": [
+       "Be able to use AVFoundation’s camera capture APIs to capture video from the camera",
+       "Be able to use AVPlayer to play video"
+    ],
+    "sprint": 10
+  },
+  {
+    "name": "MapKit",
+    "unit": "iOS Media Programming",
+    "objectives": [
+       "Be able to understand and use MKCoordinateRegion/Span to show a specific location on a map view",
+       "Be able to display annotations on a map view",
+       "Be able to customize the appearance of map annotations"
+    ],
+    "sprint": 10
+  },
+  {
+    "name": "Intro to Objective-C",
+    "unit": "Objective-C Part 1",
+    "objectives": [
+       "Be able to understand why Objective-C is important",
+       "Be able to create an Objective-C class",
+       "Be able to understand and explain the difference between header (.h) and implementation (.m) files",
+       "Be able to declare properties using Objective-C's @property syntax",
+       "Be able to declare and define Objective-C Methods",
+       "Be able to implement an initializer in Objective-C",
+       "Be able to instantiate a new object in Objective-C",
+       "Be able to explain and use Objective-C syntax to send messages / call methods"
+    ],
+    "sprint": 10
+  },
+  {
+    "name": "Objective-C Fundamentals",
+    "unit": "Objective-C Part 1",
+    "objectives": [
+       "Be able to check if an object is nil in Objective-C",
+       "Be able to write an if statement in Objective-C",
+       "Be able to write a for loop and a while loop in Objective-C",
+       "Be able to use literal syntax to create strings, arrays, and dictionaries",
+       "Be able to understand and use block syntax",
+       "Be able to use JSONSerialization to decode JSON into model objects"
+    ],
+    "sprint": 11
+  },
+  {
+    "name": "Properties, Categories, and Extensions",
+    "unit": "Objective-C Part 1",
+    "objectives": [
+       "Be able to implement custom property accessors in Objective-C",
+       "Be able to use property attributes for access (readonly vs. readwrite)",
+       "Be able to use class property attributes",
+       "Be able to use class extensions to add private properties to a class",
+       "Be able to use categories to add methods to an existing class",
+       "Be able to understand and explain the difference between categories and class extensions"
+    ],
+    "sprint": 11
+  },
+  {
+    "name": "Primitives, NSNumber, and Mutability",
+    "unit": "Objective-C Part 1",
+    "objectives": [
+       "Be able to explain the difference between an object and a primitive, along with common examples of each",
+       "Be able to understand and briefly explain the concept of pointers",
+       "Be able to use NSNumber to convert between primitive numbers and objects",
+       "Be able to understand and explain the difference between immutable and mutable classes",
+       "Be able to use copy/mutableCopy to convert from immutable to mutable and vice versa"
+    ],
+    "sprint": 11
+  },
+  {
+    "name": "Swift and Objective-C Interoperability",
+    "unit": "Objective-C Part 2",
+    "objectives": [
+       "Be able to use a bridging header to expose Objective-C to Swift",
+       "Be able to import a Swift module header to use Swift code from Objective-C",
+       "Be able to annotate Objective-C class interfaces for nullability",
+       "Be able to annotate Objective-C class interfaces with lightweight generics",
+       "Be able to call Objective-C methods from Swift",
+       "Be able to call Swift methods from Objective-C"
+    ],
+    "sprint": 12
+  },
+  {
+    "name": "KVO/KVC",
+    "unit": "Objective-C Part 2",
+    "objectives": [
+       "Be able to understand and explain Key Value Coding and common scenarios where it is useful",
+       "Be able to understand and explain what is required for a class/property to be Key Value Coding compliant",
+       "Be able to use Key Value Observing to observe property changes on an object in Objective-C",
+       "Be able to use Key Value Observing to observe property changes on an object in Swift"
+    ],
+    "sprint": 12
+  },
+  {
+    "name": "Memory Management",
+    "unit": "Objective-C Part 2",
+    "objectives": [
+       "Be able to understand and explain the rules of manual reference counting",
+       "Be able to understand and explain Objective-C’s reference counting system",
+       "Be able to understand and explain what autorelease means",
+       "Be able to effectively use custom autorelease pools in Swift and Objective-C",
+       "Be able to understand and explain what a retain cycle is",
+       "Be able to use weak properties to fix retain cycles",
+       "Be able to use closure capture lists to prevent retain cycles in closures"
+    ],
+    "sprint": 12
+  },
+  {
+    "name": "Cocoa Design Patterns in Objective-C",
+    "unit": "Objective-C Part 2",
+    "objectives": [
+       "Be able to use NSError and pass by reference for error handling in Objective-C",
+       "Be able to use NSCoding to serialize and deserialize objects for on disk persistence",
+       "Be able to understand and implement the singleton design pattern in Objective-C"
+    ],
+    "sprint": 12
   }
 ]
 

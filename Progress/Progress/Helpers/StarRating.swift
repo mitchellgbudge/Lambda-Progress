@@ -19,16 +19,17 @@ extension UIView {
                    completion: { _ in UIView.animate(withDuration: 0.1) { unflare() }})
   }
 }
+
 class StarRating: UIControl {
   
   var value: Int = 1
   
   // MARK: - Component characteristics
   
-  private let componentDimension: CGFloat = 60.0
+  private let componentDimension: CGFloat = 70.0
   private let componentCount = 3
-  private let componentActiveColor = UIColor.yellow
-  private let componentInactiveColor = UIColor.gray
+    private let componentActiveColor = ThemeHelper.lambdaLightBlue
+    private let componentInactiveColor = ThemeHelper.lambdaGrey
   private var components: [UILabel] = []
 
   // MARK: - Auto Layout
@@ -58,9 +59,10 @@ class StarRating: UIControl {
       label.frame = CGRect(origin: origin, size: componentSize)
       label.tag = index // the control's value for that component
       // Setup label
-      label.font = UIFont.boldSystemFont(ofSize: 40)
+      label.font = UIFont.boldSystemFont(ofSize: 70)
       label.text = "⭑"
       label.textAlignment = .center
+
       switch index {
       case 1:  label.textColor = componentActiveColor
       default: label.textColor = componentInactiveColor

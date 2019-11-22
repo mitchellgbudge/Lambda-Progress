@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E4D4E37238784A000EFD038 /* CareerRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4D4E36238784A000EFD038 /* CareerRepresentation.swift */; };
+		6E4D4E39238784B900EFD038 /* Career+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4D4E38238784B900EFD038 /* Career+Convenience.swift */; };
+		6E4D4E3E238798B200EFD038 /* CareerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4D4E3D238798B200EFD038 /* CareerCollectionViewCell.swift */; };
+		6E4D4E402387998700EFD038 /* CareersCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4D4E3F2387998700EFD038 /* CareersCollectionViewController.swift */; };
+		6E4D4E4223879FB400EFD038 /* CareerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4D4E4123879FB400EFD038 /* CareerDetailViewController.swift */; };
+		6E4D4E442387A2CD00EFD038 /* Careers.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E4D4E432387A2CD00EFD038 /* Careers.json */; };
+		6EAE62802386FA8A00189EA1 /* ThemeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAE627F2386FA8A00189EA1 /* ThemeHelper.swift */; };
+		6EAE62822386FB7100189EA1 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EAE62812386FB7100189EA1 /* Lato-Regular.ttf */; };
+		6EAE62842387412400189EA1 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EAE62832387412400189EA1 /* Lato-Bold.ttf */; };
 		6EB6D6A92384F22700E91174 /* StarRating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EB6D6A82384F22700E91174 /* StarRating.swift */; };
 		6ED5A08523831A75006932F1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5A08423831A75006932F1 /* AppDelegate.swift */; };
 		6ED5A08723831A75006932F1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6ED5A08623831A75006932F1 /* SceneDelegate.swift */; };
@@ -46,8 +55,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E4D4E36238784A000EFD038 /* CareerRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerRepresentation.swift; sourceTree = "<group>"; };
+		6E4D4E38238784B900EFD038 /* Career+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Career+Convenience.swift"; sourceTree = "<group>"; };
+		6E4D4E3D238798B200EFD038 /* CareerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerCollectionViewCell.swift; sourceTree = "<group>"; };
+		6E4D4E3F2387998700EFD038 /* CareersCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareersCollectionViewController.swift; sourceTree = "<group>"; };
+		6E4D4E4123879FB400EFD038 /* CareerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerDetailViewController.swift; sourceTree = "<group>"; };
+		6E4D4E432387A2CD00EFD038 /* Careers.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Careers.json; sourceTree = "<group>"; };
+		6EAE627F2386FA8A00189EA1 /* ThemeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeHelper.swift; sourceTree = "<group>"; };
+		6EAE62812386FB7100189EA1 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
+		6EAE62832387412400189EA1 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
 		6EB6D6A82384F22700E91174 /* StarRating.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarRating.swift; sourceTree = "<group>"; };
-		6ED5A08123831A75006932F1 /* Progress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Progress.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6ED5A08123831A75006932F1 /* LambdaProgress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LambdaProgress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6ED5A08423831A75006932F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6ED5A08623831A75006932F1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6ED5A08B23831A75006932F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -98,10 +116,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E4D4E3A2387854D00EFD038 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				6ED5A08D23831A75006932F1 /* Progress.xcdatamodeld */,
+				6ED5A0C923835EE3006932F1 /* CoreDataStack.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		6E4D4E3B2387855E00EFD038 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				6ED5A0CB23835F5D006932F1 /* Module+Convenience.swift */,
+				6ED5A0CF23849245006932F1 /* ModuleRepresentation.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		6E4D4E3C2387856600EFD038 /* Career */ = {
+			isa = PBXGroup;
+			children = (
+				6E4D4E38238784B900EFD038 /* Career+Convenience.swift */,
+				6E4D4E36238784A000EFD038 /* CareerRepresentation.swift */,
+			);
+			path = Career;
+			sourceTree = "<group>";
+		};
 		6EB6D6A72384F1F800E91174 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				6EB6D6A82384F22700E91174 /* StarRating.swift */,
+				6EAE627F2386FA8A00189EA1 /* ThemeHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -119,7 +165,7 @@
 		6ED5A08223831A75006932F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6ED5A08123831A75006932F1 /* Progress.app */,
+				6ED5A08123831A75006932F1 /* LambdaProgress.app */,
 				6ED5A09A23831A77006932F1 /* ProgressTests.xctest */,
 				6ED5A0A523831A77006932F1 /* ProgressUITests.xctest */,
 			);
@@ -161,10 +207,9 @@
 		6ED5A0B723831AA1006932F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6ED5A08D23831A75006932F1 /* Progress.xcdatamodeld */,
-				6ED5A0C923835EE3006932F1 /* CoreDataStack.swift */,
-				6ED5A0CB23835F5D006932F1 /* Module+Convenience.swift */,
-				6ED5A0CF23849245006932F1 /* ModuleRepresentation.swift */,
+				6E4D4E3A2387854D00EFD038 /* Core Data */,
+				6E4D4E3B2387855E00EFD038 /* Module */,
+				6E4D4E3C2387856600EFD038 /* Career */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -184,6 +229,8 @@
 				6ED5A08423831A75006932F1 /* AppDelegate.swift */,
 				6ED5A08623831A75006932F1 /* SceneDelegate.swift */,
 				6ED5A09023831A77006932F1 /* Assets.xcassets */,
+				6EAE62812386FB7100189EA1 /* Lato-Regular.ttf */,
+				6EAE62832387412400189EA1 /* Lato-Bold.ttf */,
 				6ED5A09523831A77006932F1 /* Info.plist */,
 			);
 			path = Resources;
@@ -194,6 +241,7 @@
 			children = (
 				6ED5A0CD2384671C006932F1 /* Modules.json */,
 				6ED5A0C523834F44006932F1 /* ModuleController.swift */,
+				6E4D4E432387A2CD00EFD038 /* Careers.json */,
 				6ED5A0C723834F4E006932F1 /* CareerController.swift */,
 			);
 			path = "Model Controller";
@@ -204,6 +252,7 @@
 			children = (
 				6ED5A0BF238324EB006932F1 /* ModuleTableViewCell.swift */,
 				6ED5A0BD23832330006932F1 /* ObjectiveTableViewCell.swift */,
+				6E4D4E3D238798B200EFD038 /* CareerCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -213,6 +262,8 @@
 			children = (
 				6ED5A0C123834DE0006932F1 /* ModulesTableViewController.swift */,
 				6ED5A0C323834DEF006932F1 /* ModuleDetailViewController.swift */,
+				6E4D4E3F2387998700EFD038 /* CareersCollectionViewController.swift */,
+				6E4D4E4123879FB400EFD038 /* CareerDetailViewController.swift */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -234,7 +285,7 @@
 			);
 			name = Progress;
 			productName = Progress;
-			productReference = 6ED5A08123831A75006932F1 /* Progress.app */;
+			productReference = 6ED5A08123831A75006932F1 /* LambdaProgress.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6ED5A09923831A77006932F1 /* ProgressTests */ = {
@@ -322,7 +373,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				6ED5A09423831A77006932F1 /* LaunchScreen.storyboard in Resources */,
+				6EAE62842387412400189EA1 /* Lato-Bold.ttf in Resources */,
+				6E4D4E442387A2CD00EFD038 /* Careers.json in Resources */,
 				6ED5A0CE2384671C006932F1 /* Modules.json in Resources */,
+				6EAE62822386FB7100189EA1 /* Lato-Regular.ttf in Resources */,
 				6ED5A09123831A77006932F1 /* Assets.xcassets in Resources */,
 				6ED5A08C23831A75006932F1 /* Main.storyboard in Resources */,
 			);
@@ -352,14 +406,20 @@
 				6EB6D6A92384F22700E91174 /* StarRating.swift in Sources */,
 				6ED5A0C223834DE0006932F1 /* ModulesTableViewController.swift in Sources */,
 				6ED5A08523831A75006932F1 /* AppDelegate.swift in Sources */,
+				6E4D4E4223879FB400EFD038 /* CareerDetailViewController.swift in Sources */,
 				6ED5A0C423834DEF006932F1 /* ModuleDetailViewController.swift in Sources */,
+				6E4D4E402387998700EFD038 /* CareersCollectionViewController.swift in Sources */,
 				6ED5A0C623834F44006932F1 /* ModuleController.swift in Sources */,
 				6ED5A0BE23832330006932F1 /* ObjectiveTableViewCell.swift in Sources */,
 				6ED5A0CC23835F5D006932F1 /* Module+Convenience.swift in Sources */,
+				6EAE62802386FA8A00189EA1 /* ThemeHelper.swift in Sources */,
 				6ED5A0CA23835EE3006932F1 /* CoreDataStack.swift in Sources */,
+				6E4D4E37238784A000EFD038 /* CareerRepresentation.swift in Sources */,
 				6ED5A0C823834F4E006932F1 /* CareerController.swift in Sources */,
 				6ED5A0C0238324EB006932F1 /* ModuleTableViewCell.swift in Sources */,
 				6ED5A08F23831A75006932F1 /* Progress.xcdatamodeld in Sources */,
+				6E4D4E39238784B900EFD038 /* Career+Convenience.swift in Sources */,
+				6E4D4E3E238798B200EFD038 /* CareerCollectionViewCell.swift in Sources */,
 				6ED5A0D023849245006932F1 /* ModuleRepresentation.swift in Sources */,
 				6ED5A08723831A75006932F1 /* SceneDelegate.swift in Sources */,
 			);
@@ -535,15 +595,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K3F959XXFV;
+				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = Progress/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mitchellgbudge.Progress;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lambdaschool.lambdaprogress;
+				PRODUCT_NAME = LambdaProgress;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -553,16 +613,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K3F959XXFV;
+				DEVELOPMENT_TEAM = VXUQXR6S56;
 				INFOPLIST_FILE = Progress/Resources/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.mitchellgbudge.Progress;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.lambdaschool.lambdaprogress;
+				PRODUCT_NAME = LambdaProgress;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -3,6 +3,7 @@
     <entity name="Career" representedClassName="Career" syncable="YES" codeGenerationType="class">
         <attribute name="assignment" optional="YES" attributeType="String"/>
         <attribute name="completed" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="info" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Module" representedClassName="Module" syncable="YES" codeGenerationType="class">
@@ -10,13 +11,14 @@
         <attribute name="identifier" optional="YES" attributeType="String"/>
         <attribute name="mastery" optional="YES" attributeType="Double" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="objectiveMastery" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="objectives" optional="YES" attributeType="Transformable" customClassName="[String]"/>
         <attribute name="rating" optional="YES" attributeType="Double" defaultValueString="1" usesScalarValueType="YES"/>
-        <attribute name="sprint" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="sprint" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="unit" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Career" positionX="-54" positionY="27" width="128" height="88"/>
-        <element name="Module" positionX="-63" positionY="-18" width="128" height="163"/>
+        <element name="Career" positionX="-54" positionY="27" width="128" height="103"/>
+        <element name="Module" positionX="-63" positionY="-18" width="128" height="178"/>
     </elements>
 </model>

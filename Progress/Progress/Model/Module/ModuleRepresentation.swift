@@ -12,8 +12,9 @@ struct ModuleRepresentation: Codable {
     var name: String?
     var unit: String?
     var objectives: [String]?
+    var objectiveMastery: Double?
+    var sprint: Double?
     var mastery: Double?
-    var sprint: Int16
     var confidence: Double?
     var rating: Double?
     var identifier: String?

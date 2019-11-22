@@ -14,13 +14,5 @@ class ModuleTableViewCell: UITableViewCell {
     
     @IBOutlet weak var moduleNameLabel: UILabel!
     @IBOutlet weak var masteryPercentageLabel: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
 
 }
