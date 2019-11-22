@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6E4D4E37238784A000EFD038 /* CareerRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4D4E36238784A000EFD038 /* CareerRepresentation.swift */; };
 		6E4D4E39238784B900EFD038 /* Career+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4D4E38238784B900EFD038 /* Career+Convenience.swift */; };
+		6E4D4E3E238798B200EFD038 /* CareerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4D4E3D238798B200EFD038 /* CareerCollectionViewCell.swift */; };
 		6EAE62802386FA8A00189EA1 /* ThemeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAE627F2386FA8A00189EA1 /* ThemeHelper.swift */; };
 		6EAE62822386FB7100189EA1 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EAE62812386FB7100189EA1 /* Lato-Regular.ttf */; };
 		6EAE62842387412400189EA1 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EAE62832387412400189EA1 /* Lato-Bold.ttf */; };
@@ -53,6 +54,7 @@
 /* Begin PBXFileReference section */
 		6E4D4E36238784A000EFD038 /* CareerRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerRepresentation.swift; sourceTree = "<group>"; };
 		6E4D4E38238784B900EFD038 /* Career+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Career+Convenience.swift"; sourceTree = "<group>"; };
+		6E4D4E3D238798B200EFD038 /* CareerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerCollectionViewCell.swift; sourceTree = "<group>"; };
 		6EAE627F2386FA8A00189EA1 /* ThemeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeHelper.swift; sourceTree = "<group>"; };
 		6EAE62812386FB7100189EA1 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		6EAE62832387412400189EA1 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			children = (
 				6ED5A0BF238324EB006932F1 /* ModuleTableViewCell.swift */,
 				6ED5A0BD23832330006932F1 /* ObjectiveTableViewCell.swift */,
+				6E4D4E3D238798B200EFD038 /* CareerCollectionViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				6ED5A0C0238324EB006932F1 /* ModuleTableViewCell.swift in Sources */,
 				6ED5A08F23831A75006932F1 /* Progress.xcdatamodeld in Sources */,
 				6E4D4E39238784B900EFD038 /* Career+Convenience.swift in Sources */,
+				6E4D4E3E238798B200EFD038 /* CareerCollectionViewCell.swift in Sources */,
 				6ED5A0D023849245006932F1 /* ModuleRepresentation.swift in Sources */,
 				6ED5A08723831A75006932F1 /* SceneDelegate.swift in Sources */,
 			);
