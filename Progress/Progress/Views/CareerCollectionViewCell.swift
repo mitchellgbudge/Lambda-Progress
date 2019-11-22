@@ -11,5 +11,6 @@ import UIKit
 class CareerCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var careerLabel: UILabel!
+    @IBOutlet weak var completedLabel: UILabel!
     
 }

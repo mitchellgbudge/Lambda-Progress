@@ -249,13 +249,13 @@
         <!--Career Assignments-->
         <scene sceneID="2xa-8F-Orp">
             <objects>
-                <collectionViewController id="OLU-nG-6BB" sceneMemberID="viewController">
+                <collectionViewController id="OLU-nG-6BB" customClass="CareersCollectionViewController" customModule="LambdaProgress" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="60p-qq-0BX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="dn1-Di-2oH">
-                            <size key="itemSize" width="50" height="50"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="dn1-Di-2oH">
+                            <size key="itemSize" width="193" height="193"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -268,21 +268,39 @@
                                     <rect key="frame" x="0.0" y="0.0" width="193" height="193"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQy-Ta-0y0">
-                                            <rect key="frame" x="60" y="78.5" width="73" height="36"/>
-                                            <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="30"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQy-Ta-0y0">
+                                            <rect key="frame" x="8" y="8" width="177" height="145"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="145" id="exZ-Bi-IwF"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="30"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDq-u2-1na">
+                                            <rect key="frame" x="8" y="161" width="177" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="24" id="xe5-Gj-dyu"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="aQy-Ta-0y0" firstAttribute="centerY" secondItem="w9d-xY-9Jh" secondAttribute="centerY" id="SHi-FN-5dA"/>
-                                        <constraint firstItem="aQy-Ta-0y0" firstAttribute="centerX" secondItem="w9d-xY-9Jh" secondAttribute="centerX" id="e7L-G3-2LM"/>
+                                        <constraint firstItem="dDq-u2-1na" firstAttribute="leading" secondItem="w9d-xY-9Jh" secondAttribute="leading" constant="8" id="Fnj-lT-Gg3"/>
+                                        <constraint firstItem="aQy-Ta-0y0" firstAttribute="top" secondItem="w9d-xY-9Jh" secondAttribute="top" constant="8" id="K24-rs-LFb"/>
+                                        <constraint firstItem="dDq-u2-1na" firstAttribute="top" secondItem="aQy-Ta-0y0" secondAttribute="bottom" constant="8" id="O7I-U2-opB"/>
+                                        <constraint firstAttribute="trailing" secondItem="dDq-u2-1na" secondAttribute="trailing" constant="8" id="VWm-JZ-isq"/>
+                                        <constraint firstItem="aQy-Ta-0y0" firstAttribute="leading" secondItem="w9d-xY-9Jh" secondAttribute="leading" constant="8" id="ewX-hV-8TE"/>
+                                        <constraint firstAttribute="bottom" secondItem="dDq-u2-1na" secondAttribute="bottom" constant="8" id="tVb-Ff-Bok"/>
+                                        <constraint firstAttribute="trailing" secondItem="aQy-Ta-0y0" secondAttribute="trailing" constant="8" id="x57-Ej-sUr"/>
                                     </constraints>
                                 </collectionViewCellContentView>
                                 <size key="customSize" width="193" height="193"/>
                                 <connections>
                                     <outlet property="careerLabel" destination="aQy-Ta-0y0" id="ZWP-S0-Piy"/>
+                                    <outlet property="completedLabel" destination="dDq-u2-1na" id="fA8-6R-U7J"/>
                                     <segue destination="5Sp-mS-PYr" kind="show" identifier="ShowCareer" id="NeG-B0-CQa"/>
                                 </connections>
                             </collectionViewCell>
@@ -301,7 +319,7 @@
         <!--Career name-->
         <scene sceneID="pjR-df-aAm">
             <objects>
-                <viewController id="5Sp-mS-PYr" sceneMemberID="viewController">
+                <viewController id="5Sp-mS-PYr" customClass="CareerDetailViewController" customModule="LambdaProgress" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AiN-Rz-H1S">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -312,7 +330,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3a1-lA-fmE">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3a1-lA-fmE">
                                 <rect key="frame" x="20" y="206" width="374" height="400"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -320,8 +338,9 @@
                                 </constraints>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="21"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Link:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mMc-Ri-tAl">
                                 <rect key="frame" x="20" y="622" width="374" height="30"/>
@@ -329,7 +348,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Xms-ez-yiv">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Xms-ez-yiv">
                                 <rect key="frame" x="20" y="660" width="374" height="50"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
@@ -342,11 +361,12 @@
                                 <dataDetectorType key="dataDetectorTypes" link="YES"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hpY-xy-nEQ">
-                                <rect key="frame" x="59" y="726" width="296" height="48"/>
+                                <rect key="frame" x="76.5" y="726" width="261" height="48"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="30"/>
-                                <state key="normal" title=" Update your progress "/>
+                                <state key="normal" title=" Mark as completed "/>
                                 <connections>
                                     <action selector="saveButtonPressed:" destination="cMW-Te-UYK" eventType="touchUpInside" id="18f-Kc-uZR"/>
+                                    <action selector="saveButtonPressed:" destination="5Sp-mS-PYr" eventType="touchUpInside" id="zGY-DB-HSm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -370,6 +390,11 @@
                         <viewLayoutGuide key="safeArea" id="di0-jI-vih"/>
                     </view>
                     <navigationItem key="navigationItem" title="Career name" id="Zvv-Yj-h6N"/>
+                    <connections>
+                        <outlet property="assignmentTextView" destination="3a1-lA-fmE" id="chq-Cy-nur"/>
+                        <outlet property="infoTextView" destination="Xms-ez-yiv" id="UOb-kB-pSL"/>
+                        <outlet property="saveButton" destination="hpY-xy-nEQ" id="1p0-Q4-1HS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XWz-aV-dn0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -397,11 +422,11 @@
             </objects>
             <point key="canvasLocation" x="1533.3333333333335" y="-381.02678571428572"/>
         </scene>
-        <!--Careers-->
+        <!--Career Prep-->
         <scene sceneID="ojX-b5-Re1">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CXa-Lk-vtv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Careers" image="person.3" catalog="system" id="Of6-Nf-xd4"/>
+                    <tabBarItem key="tabBarItem" title="Career Prep" image="person.3" catalog="system" id="Of6-Nf-xd4"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="n51-Sl-2Js">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>

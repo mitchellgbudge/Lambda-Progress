@@ -36,7 +36,7 @@ class CareerController {
             do {
                 careerReps = try jsonDecoder.decode([CareerRepresentation].self, from: jsonData)
                 let existingCareers = try context.fetch(fetchRequest)
-                if existingCareers == [Module]() {
+                if existingCareers == [Career]() {
                     for career in careerReps {
                         Career(careerRepresentation: career, context: context)
                         CoreDataStack.shared.save(context: context)

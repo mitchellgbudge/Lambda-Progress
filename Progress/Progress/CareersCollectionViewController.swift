@@ -14,6 +14,7 @@ class CareersCollectionViewController: UICollectionViewController, NSFetchedResu
     // MARK: - Properties
     
     let careerController = CareerController()
+    fileprivate var selectedCareer: Career?
     
     lazy var fetchedResultsController: NSFetchedResultsController<Career> = {
         let fetchRequest: NSFetchRequest<Career> = Career.fetchRequest()
@@ -29,7 +30,11 @@ class CareersCollectionViewController: UICollectionViewController, NSFetchedResu
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        collectionView.reloadData()
     }
 
     // MARK: UICollectionViewDataSource
@@ -46,60 +51,87 @@ class CareersCollectionViewController: UICollectionViewController, NSFetchedResu
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CareerCell", for: indexPath) as? CareerCollectionViewCell else { return UICollectionViewCell() }
         let career = fetchedResultsController.object(at: indexPath)
+        cell.careerLabel.numberOfLines = 0
+        cell.careerLabel.lineBreakMode = .byWordWrapping
+        cell.layer.cornerRadius = 25.0
+        cell.layer.borderWidth = 3.0
+        cell.layer.borderColor = ThemeHelper.lambdaLightBlue.cgColor
         cell.careerLabel.text = career.name
+        if career.completed == true {
+            cell.completedLabel.text = "Completed ✅"
+        }
         return cell
     }
     
-    private var blockOperations: [BlockOperation] = []
-
-    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        blockOperations.removeAll(keepingCapacity: false)
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        guard let career = fetchedResultsController.fetchedObjects?[indexPath.row] else { return }
+        self.selectedCareer = career
     }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
 
-    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>,
-                    didChange anObject: Any,
-                    at indexPath: IndexPath?,
-                    for type: NSFetchedResultsChangeType,
-                    newIndexPath: IndexPath?) {
-
-        let op: BlockOperation
         switch type {
         case .insert:
-            guard let newIndexPath = newIndexPath else { return }
-            op = BlockOperation { self.collectionView.insertItems(at: [newIndexPath]) }
+            DispatchQueue.main.async {
+                self.collectionView!.numberOfItems(inSection: 0)
+                self.collectionView.insertItems(at: [newIndexPath!])
+            }
+            break
 
         case .delete:
-            guard let indexPath = indexPath else { return }
-            op = BlockOperation { self.collectionView.deleteItems(at: [indexPath]) }
-        case .move:
-            guard let indexPath = indexPath,  let newIndexPath = newIndexPath else { return }
-            op = BlockOperation { self.collectionView.moveItem(at: indexPath, to: newIndexPath) }
+            DispatchQueue.main.async {
+                self.collectionView!.numberOfItems(inSection: 0)
+                self.collectionView.deleteItems(at: [indexPath!])
+            }
+            break
         case .update:
-            guard let indexPath = indexPath else { return }
-            op = BlockOperation { self.collectionView.reloadItems(at: [indexPath]) }
+            DispatchQueue.main.async {
+                self.collectionView!.numberOfItems(inSection: 0)
+                self.collectionView.reloadItems(at: [indexPath!])
+            }
+            break
+        case .move:
+            DispatchQueue.main.async {
+                self.collectionView!.numberOfItems(inSection: 0)
+                self.collectionView.moveItem(at: indexPath!, to: newIndexPath!)
+            }
         @unknown default:
             fatalError()
         }
-
-        blockOperations.append(op)
     }
 
-    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
-        collectionView.performBatchUpdates({
-            self.blockOperations.forEach { $0.start() }
-        }, completion: { finished in
-            self.blockOperations.removeAll(keepingCapacity: false)
-        })
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange sectionInfo: NSFetchedResultsSectionInfo, atSectionIndex sectionIndex: Int, for type: NSFetchedResultsChangeType) {
+        print ("section info changed in fecthed controller")
+        let indexSet = IndexSet(integer: sectionIndex)
+        switch type {
+        case .insert:
+            self.collectionView!.numberOfItems(inSection: 0)
+            collectionView.insertSections(indexSet)
+            break
+        case .delete:
+            self.collectionView!.numberOfItems(inSection: 0)
+            collectionView.deleteSections(indexSet)
+        case .update, .move:
+            fatalError("Invalid change type in controller(_:didChange:atSectionIndex:for:). Only .insert or .delete should be possible.")
+        @unknown default:
+            fatalError()
+        }
     }
+    
+    func controllerWillChangeContent(_ controller:
+    NSFetchedResultsController<NSFetchRequestResult>) {
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
+        }
 
     // MARK: - Navigation
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ShowCareer" {
-            guard let destinationVC = segue.destination as? CareerDetailViewController,
-                let indexPath = collectionView.indexPathsForSelectedItems else { return }
-            destinationVC.career = fetchedResultsController.object(at: indexPath)
-            destinationVC.careerController = moduleController
+            guard let destinationVC = segue.destination as? CareerDetailViewController else { return }
+            destinationVC.career = selectedCareer
+            destinationVC.careerController = careerController
         }
     }
 
