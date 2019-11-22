@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E4D4E37238784A000EFD038 /* CareerRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4D4E36238784A000EFD038 /* CareerRepresentation.swift */; };
+		6E4D4E39238784B900EFD038 /* Career+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4D4E38238784B900EFD038 /* Career+Convenience.swift */; };
 		6EAE62802386FA8A00189EA1 /* ThemeHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAE627F2386FA8A00189EA1 /* ThemeHelper.swift */; };
 		6EAE62822386FB7100189EA1 /* Lato-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EAE62812386FB7100189EA1 /* Lato-Regular.ttf */; };
 		6EAE62842387412400189EA1 /* Lato-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6EAE62832387412400189EA1 /* Lato-Bold.ttf */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6E4D4E36238784A000EFD038 /* CareerRepresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareerRepresentation.swift; sourceTree = "<group>"; };
+		6E4D4E38238784B900EFD038 /* Career+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Career+Convenience.swift"; sourceTree = "<group>"; };
 		6EAE627F2386FA8A00189EA1 /* ThemeHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeHelper.swift; sourceTree = "<group>"; };
 		6EAE62812386FB7100189EA1 /* Lato-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Regular.ttf"; sourceTree = "<group>"; };
 		6EAE62832387412400189EA1 /* Lato-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Lato-Bold.ttf"; sourceTree = "<group>"; };
@@ -104,6 +108,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E4D4E3A2387854D00EFD038 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				6ED5A08D23831A75006932F1 /* Progress.xcdatamodeld */,
+				6ED5A0C923835EE3006932F1 /* CoreDataStack.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		6E4D4E3B2387855E00EFD038 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				6ED5A0CB23835F5D006932F1 /* Module+Convenience.swift */,
+				6ED5A0CF23849245006932F1 /* ModuleRepresentation.swift */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		6E4D4E3C2387856600EFD038 /* Career */ = {
+			isa = PBXGroup;
+			children = (
+				6E4D4E38238784B900EFD038 /* Career+Convenience.swift */,
+				6E4D4E36238784A000EFD038 /* CareerRepresentation.swift */,
+			);
+			path = Career;
+			sourceTree = "<group>";
+		};
 		6EB6D6A72384F1F800E91174 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,10 +199,9 @@
 		6ED5A0B723831AA1006932F1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				6ED5A08D23831A75006932F1 /* Progress.xcdatamodeld */,
-				6ED5A0C923835EE3006932F1 /* CoreDataStack.swift */,
-				6ED5A0CB23835F5D006932F1 /* Module+Convenience.swift */,
-				6ED5A0CF23849245006932F1 /* ModuleRepresentation.swift */,
+				6E4D4E3A2387854D00EFD038 /* Core Data */,
+				6E4D4E3B2387855E00EFD038 /* Module */,
+				6E4D4E3C2387856600EFD038 /* Career */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -369,9 +399,11 @@
 				6ED5A0CC23835F5D006932F1 /* Module+Convenience.swift in Sources */,
 				6EAE62802386FA8A00189EA1 /* ThemeHelper.swift in Sources */,
 				6ED5A0CA23835EE3006932F1 /* CoreDataStack.swift in Sources */,
+				6E4D4E37238784A000EFD038 /* CareerRepresentation.swift in Sources */,
 				6ED5A0C823834F4E006932F1 /* CareerController.swift in Sources */,
 				6ED5A0C0238324EB006932F1 /* ModuleTableViewCell.swift in Sources */,
 				6ED5A08F23831A75006932F1 /* Progress.xcdatamodeld in Sources */,
+				6E4D4E39238784B900EFD038 /* Career+Convenience.swift in Sources */,
 				6ED5A0D023849245006932F1 /* ModuleRepresentation.swift in Sources */,
 				6ED5A08723831A75006932F1 /* SceneDelegate.swift in Sources */,
 			);

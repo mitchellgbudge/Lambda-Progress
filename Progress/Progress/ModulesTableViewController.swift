@@ -18,7 +18,6 @@ class ModulesTableViewController: UITableViewController {
     lazy var fetchedResultsController: NSFetchedResultsController<Module> = {
         let fetchRequest: NSFetchRequest<Module> = Module.fetchRequest()
         fetchRequest.sortDescriptors = [NSSortDescriptor(key: "unit", ascending: true)]
-        
         let moc = CoreDataStack.shared.mainContext
         let frc = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: moc, sectionNameKeyPath: "unit", cacheName: nil)
         frc.delegate = self

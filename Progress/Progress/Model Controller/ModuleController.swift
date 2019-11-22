@@ -10,11 +10,7 @@ import Foundation
 import CoreData
 
 class ModuleController {
-    
-    // MARK: - Properties
-    
-    
-    
+
     // MARK: - Methods
     
     init() {

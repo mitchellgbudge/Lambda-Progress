@@ -3,6 +3,7 @@
     <entity name="Career" representedClassName="Career" syncable="YES" codeGenerationType="class">
         <attribute name="assignment" optional="YES" attributeType="String"/>
         <attribute name="completed" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
+        <attribute name="info" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
     </entity>
     <entity name="Module" representedClassName="Module" syncable="YES" codeGenerationType="class">
@@ -17,7 +18,7 @@
         <attribute name="unit" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Career" positionX="-54" positionY="27" width="128" height="88"/>
+        <element name="Career" positionX="-54" positionY="27" width="128" height="103"/>
         <element name="Module" positionX="-63" positionY="-18" width="128" height="178"/>
     </elements>
 </model>
