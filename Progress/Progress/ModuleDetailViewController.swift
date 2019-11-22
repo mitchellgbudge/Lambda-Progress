@@ -53,6 +53,7 @@ class ModuleDetailViewController: UIViewController {
         default:
             module.confidence = 1
         }
+        
     }
     
     @IBAction func updateRating(_ ratingControl: StarRating) {
@@ -75,6 +76,8 @@ class ModuleDetailViewController: UIViewController {
             module.mastery = 50
         } else if module.confidence < 2 && module.rating >= 2 {
             module.mastery = 50
+        } else {
+            module.mastery = 0
         }
         return module.mastery
     }
@@ -84,8 +87,6 @@ class ModuleDetailViewController: UIViewController {
         moduleController?.updateModule(module: module, confidence: module.confidence, rating: module.rating, mastery: calculateMastery())
         self.navigationController?.popToRootViewController(animated: true)
     }
-    
-    
     
     
 }
@@ -112,11 +113,19 @@ extension ModuleDetailViewController: UITableViewDelegate, UITableViewDataSource
     }
 }
 
+// MARK: - Theming
 
 extension ModuleDetailViewController {
     
     func setTheme() {
+        tableView.layer.cornerRadius = 25.0
+        tableView.layer.borderWidth = 3.0
+        tableView.layer.borderColor = ThemeHelper.lambdaLightBlue.cgColor
         
+        saveButton.setTitleColor(ThemeHelper.lambdaRed, for: .normal)
+        saveButton.layer.borderWidth = 0.5
+        saveButton.layer.cornerRadius = 10.0
+        saveButton.layer.borderColor = ThemeHelper.lambdaRed.cgColor
     }
     
 }

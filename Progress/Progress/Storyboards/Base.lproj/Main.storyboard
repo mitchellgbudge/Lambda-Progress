@@ -7,6 +7,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="Lato-Bold.ttf">
+            <string>Lato-Bold</string>
+        </array>
         <array key="Lato-Regular.ttf">
             <string>Lato-Regular</string>
         </array>
@@ -16,29 +19,35 @@
         <scene sceneID="UQ0-PK-s8k">
             <objects>
                 <tableViewController id="Fl8-Wy-J3c" customClass="ModulesTableViewController" customModule="LambdaProgress" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="QCG-mN-MMQ">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="QCG-mN-MMQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ModuleCell" id="zaB-8h-gJE" customClass="ModuleTableViewCell" customModule="LambdaProgress" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zaB-8h-gJE" id="WN0-gN-gXe">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mZh-IJ-VXM">
-                                            <rect key="frame" x="20" y="11" width="374" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Module name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXO-Rj-dvA">
+                                            <rect key="frame" x="20" y="27" width="291.5" height="26.5"/>
+                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="22"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dHF-Fz-ap5">
+                                            <rect key="frame" x="331.5" y="11" width="62.5" height="58.5"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Module name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXO-Rj-dvA">
-                                                    <rect key="frame" x="0.0" y="0.0" width="286" height="21"/>
-                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="0%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzQ-fy-lIR">
+                                                    <rect key="frame" x="0.0" y="0.0" width="62.5" height="30"/>
+                                                    <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="25"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="249" verticalHuggingPriority="249" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="0%" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzQ-fy-lIR">
-                                                    <rect key="frame" x="294" y="0.0" width="80" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mastery" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sJv-lc-Hbz">
+                                                    <rect key="frame" x="0.0" y="38" width="62.5" height="20.5"/>
                                                     <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -47,10 +56,11 @@
                                         </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstAttribute="bottomMargin" secondItem="mZh-IJ-VXM" secondAttribute="bottom" id="1Lf-CT-rrJ"/>
-                                        <constraint firstItem="mZh-IJ-VXM" firstAttribute="top" secondItem="WN0-gN-gXe" secondAttribute="topMargin" id="YMd-x6-coZ"/>
-                                        <constraint firstItem="mZh-IJ-VXM" firstAttribute="leading" secondItem="WN0-gN-gXe" secondAttribute="leadingMargin" id="kgV-hP-luP"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="mZh-IJ-VXM" secondAttribute="trailing" id="yjM-3h-iqO"/>
+                                        <constraint firstItem="dHF-Fz-ap5" firstAttribute="centerY" secondItem="WN0-gN-gXe" secondAttribute="centerY" id="8w2-kc-yJ2"/>
+                                        <constraint firstItem="dHF-Fz-ap5" firstAttribute="leading" secondItem="QXO-Rj-dvA" secondAttribute="trailing" constant="20" id="FgU-ea-8xL"/>
+                                        <constraint firstItem="QXO-Rj-dvA" firstAttribute="centerY" secondItem="WN0-gN-gXe" secondAttribute="centerY" id="Wv9-pX-nfr"/>
+                                        <constraint firstItem="QXO-Rj-dvA" firstAttribute="leading" secondItem="WN0-gN-gXe" secondAttribute="leadingMargin" id="bbJ-t5-eog"/>
+                                        <constraint firstAttribute="trailing" secondItem="dHF-Fz-ap5" secondAttribute="trailing" constant="20" id="nqE-Xe-3cq"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -65,9 +75,7 @@
                             <outlet property="delegate" destination="Fl8-Wy-J3c" id="xh8-O7-jf5"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="iOS Core" id="msE-fc-sEg">
-                        <barButtonItem key="backBarButtonItem" title="Back to iOS Core" id="T5P-OJ-LeG"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="iOS Core" id="msE-fc-sEg"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JG6-e5-61q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,14 +91,14 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Objectives:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TkU-sy-6HU">
                                 <rect key="frame" x="20" y="160" width="374" height="30"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="70" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yb7-Ce-lDo">
-                                <rect key="frame" x="0.0" y="206" width="414" height="260"/>
+                                <rect key="frame" x="0.0" y="206" width="414" height="350"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="260" id="OJM-Ec-MpU"/>
+                                    <constraint firstAttribute="height" constant="350" id="OJM-Ec-MpU"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ObjectiveCell" rowHeight="70" id="mjI-Ft-oGs" customClass="ObjectiveTableViewCell" customModule="LambdaProgress" customModuleProvider="target">
@@ -141,21 +149,21 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Guided Project Confidence:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mG5-4f-q6i">
-                                <rect key="frame" x="20" y="482" width="374" height="30"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="25"/>
+                                <rect key="frame" x="20" y="572" width="374" height="30"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="91q-lF-Bkf">
-                                <rect key="frame" x="20" y="714" width="374" height="48"/>
+                                <rect key="frame" x="59" y="804" width="296" height="48"/>
                                 <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="30"/>
-                                <state key="normal" title="Save your progress"/>
+                                <state key="normal" title=" Update your progress "/>
                                 <connections>
                                     <action selector="saveButtonPressed:" destination="cMW-Te-UYK" eventType="touchUpInside" id="f13-bS-jR9"/>
                                 </connections>
                             </button>
                             <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="mSc-xC-vhT" customClass="StarRating" customModule="LambdaProgress" customModuleProvider="target">
-                                <rect key="frame" x="100" y="520" width="264" height="70"/>
+                                <rect key="frame" x="80" y="610" width="254" height="70"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="2qi-kh-8Z0"/>
@@ -165,13 +173,13 @@
                                 </connections>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Afternoon Project MVP:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lp7-Sb-WTH">
-                                <rect key="frame" x="20" y="598" width="374" height="30"/>
-                                <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="25"/>
+                                <rect key="frame" x="20" y="688" width="374" height="30"/>
+                                <fontDescription key="fontDescription" name="Lato-Bold" family="Lato" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ph9-ZZ-czV" customClass="StarRating" customModule="LambdaProgress" customModuleProvider="target">
-                                <rect key="frame" x="100" y="636" width="264" height="70"/>
+                                <rect key="frame" x="80" y="726" width="254" height="70"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="NEE-Mx-zKP"/>
@@ -184,26 +192,25 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="yb7-Ce-lDo" firstAttribute="top" secondItem="TkU-sy-6HU" secondAttribute="bottom" constant="16" id="21r-do-t8D"/>
-                            <constraint firstItem="HdV-98-gvh" firstAttribute="trailing" secondItem="Ph9-ZZ-czV" secondAttribute="trailing" constant="50" id="Ejw-xw-r0i"/>
+                            <constraint firstItem="HdV-98-gvh" firstAttribute="trailing" secondItem="Ph9-ZZ-czV" secondAttribute="trailing" constant="80" id="Ejw-xw-r0i"/>
                             <constraint firstItem="HdV-98-gvh" firstAttribute="trailing" secondItem="mG5-4f-q6i" secondAttribute="trailing" constant="20" id="HDR-Fg-mQv"/>
                             <constraint firstItem="HdV-98-gvh" firstAttribute="trailing" secondItem="TkU-sy-6HU" secondAttribute="trailing" constant="20" id="Hs1-0e-jYY"/>
                             <constraint firstItem="HdV-98-gvh" firstAttribute="trailing" secondItem="Lp7-Sb-WTH" secondAttribute="trailing" constant="20" id="JLd-Sq-Uv9"/>
                             <constraint firstItem="mSc-xC-vhT" firstAttribute="top" secondItem="mG5-4f-q6i" secondAttribute="bottom" constant="8" id="JhS-0W-8wM"/>
-                            <constraint firstItem="Ph9-ZZ-czV" firstAttribute="leading" secondItem="HdV-98-gvh" secondAttribute="leading" constant="100" id="LrO-Bx-Trs"/>
+                            <constraint firstItem="Ph9-ZZ-czV" firstAttribute="leading" secondItem="HdV-98-gvh" secondAttribute="leading" constant="80" id="LrO-Bx-Trs"/>
                             <constraint firstItem="91q-lF-Bkf" firstAttribute="top" secondItem="Ph9-ZZ-czV" secondAttribute="bottom" constant="8" id="Q1V-Ld-NKN"/>
-                            <constraint firstItem="HdV-98-gvh" firstAttribute="trailing" secondItem="mSc-xC-vhT" secondAttribute="trailing" constant="50" id="Vu7-UY-P6c"/>
+                            <constraint firstItem="91q-lF-Bkf" firstAttribute="centerX" secondItem="RB2-nl-3hw" secondAttribute="centerX" id="Tfj-yJ-NQK"/>
+                            <constraint firstItem="HdV-98-gvh" firstAttribute="trailing" secondItem="mSc-xC-vhT" secondAttribute="trailing" constant="80" id="Vu7-UY-P6c"/>
                             <constraint firstItem="yb7-Ce-lDo" firstAttribute="leading" secondItem="HdV-98-gvh" secondAttribute="leading" id="bJ9-rl-Qeq"/>
                             <constraint firstItem="Lp7-Sb-WTH" firstAttribute="leading" secondItem="HdV-98-gvh" secondAttribute="leading" constant="20" id="cgN-ur-gD6"/>
                             <constraint firstItem="yb7-Ce-lDo" firstAttribute="trailing" secondItem="HdV-98-gvh" secondAttribute="trailing" id="dOC-U0-4d3"/>
                             <constraint firstItem="mG5-4f-q6i" firstAttribute="top" secondItem="yb7-Ce-lDo" secondAttribute="bottom" constant="16" id="ePu-64-6Zj"/>
                             <constraint firstItem="mG5-4f-q6i" firstAttribute="leading" secondItem="HdV-98-gvh" secondAttribute="leading" constant="20" id="enm-WM-PKe"/>
                             <constraint firstItem="TkU-sy-6HU" firstAttribute="leading" secondItem="HdV-98-gvh" secondAttribute="leading" constant="20" id="l0u-xE-nBq"/>
-                            <constraint firstItem="91q-lF-Bkf" firstAttribute="leading" secondItem="HdV-98-gvh" secondAttribute="leading" constant="20" id="o2s-yl-3WF"/>
                             <constraint firstItem="Lp7-Sb-WTH" firstAttribute="top" secondItem="mSc-xC-vhT" secondAttribute="bottom" constant="8" id="ofW-UZ-anV"/>
                             <constraint firstItem="Ph9-ZZ-czV" firstAttribute="top" secondItem="Lp7-Sb-WTH" secondAttribute="bottom" constant="8" id="qxW-Gg-yEp"/>
                             <constraint firstItem="TkU-sy-6HU" firstAttribute="top" secondItem="HdV-98-gvh" secondAttribute="top" constant="20" id="rt6-Ui-0Qr"/>
-                            <constraint firstItem="mSc-xC-vhT" firstAttribute="leading" secondItem="HdV-98-gvh" secondAttribute="leading" constant="100" id="yT5-7H-vWt"/>
-                            <constraint firstItem="HdV-98-gvh" firstAttribute="trailing" secondItem="91q-lF-Bkf" secondAttribute="trailing" constant="20" id="z5Q-I9-hsc"/>
+                            <constraint firstItem="mSc-xC-vhT" firstAttribute="leading" secondItem="HdV-98-gvh" secondAttribute="leading" constant="80" id="yT5-7H-vWt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HdV-98-gvh"/>
                     </view>
@@ -222,18 +229,26 @@
         <!--Navigation Controller-->
         <scene sceneID="4fi-ZY-3IZ">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cj5-s1-cdD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J2s-ju-ByF" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="BG0-YS-D11">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="30"/>
+                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="24"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="Fl8-Wy-J3c" kind="relationship" relationship="rootViewController" id="lzv-2g-udU"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cj5-s1-cdD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-71" y="-381"/>
         </scene>

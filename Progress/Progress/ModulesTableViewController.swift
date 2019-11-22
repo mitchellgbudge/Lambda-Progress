@@ -48,6 +48,8 @@ class ModulesTableViewController: UITableViewController {
         return fetchedResultsController.sections?[section].name
     }
     
+    
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return fetchedResultsController.sections?[section].numberOfObjects ?? 0
     }
@@ -55,8 +57,17 @@ class ModulesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ModuleCell", for: indexPath) as? ModuleTableViewCell else { return UITableViewCell() }
         let module = fetchedResultsController.object(at: indexPath)
+        cell.moduleNameLabel.numberOfLines = 0
+        cell.moduleNameLabel.lineBreakMode = .byWordWrapping
         cell.moduleNameLabel.text = module.name
         cell.masteryPercentageLabel.text = "\(Int(module.mastery))%"
+        if module.mastery == 100 {
+            cell.backgroundColor = ThemeHelper.lambdaLightBlue
+        } else if module.mastery > 0 {
+            cell.backgroundColor = ThemeHelper.lambdaRed
+        } else {
+            cell.backgroundColor = .clear
+        }
         return cell
     }
 

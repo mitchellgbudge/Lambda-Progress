@@ -20,19 +20,7 @@ class ObjectiveTableViewCell: UITableViewCell {
     
     @IBAction func starButtonTapped(_ sender: Any) {
         starButton.setImage(UIImage(named: "StarFilled"), for: .normal)
-        performFlareAnimation()
+        starButton.performFlare()
     }
-    
-    // TODO: - Fix flare to only animating UIButton
-    
-    func performFlareAnimation() {
-        func flare()   { transform = CGAffineTransform(scaleX: 1.2, y: 1.2) }
-      func unflare() { transform = .identity }
-      
-        UIView.animate(withDuration: 0.3,
-                     animations: { flare() },
-                     completion: { _ in UIView.animate(withDuration: 0.1) { unflare() }})
-    }
-    
 
 }
