@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ModuleDetailViewController: UIViewController {
+class ModuleDetailViewController: UIViewController, ObjectiveTableViewCellDelegate {
     
     // MARK: - Properties & outlets
     var module: Module? {
@@ -17,6 +17,7 @@ class ModuleDetailViewController: UIViewController {
         }
     }
     var moduleController: ModuleController?
+    var arithmetic: Double = 0
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var saveButton: UIButton!
@@ -41,6 +42,11 @@ class ModuleDetailViewController: UIViewController {
         self.title = module.name
         guidedProjectStars.value = Int(module.confidence)
         afternoonProjectStars.value = Int(module.rating)
+    }
+    
+    func objectiveMastered(on cell: ObjectiveTableViewCell) {
+        guard let module = module else { return }
+        module.objectiveMastery += 1
     }
     
     @IBAction func updateConfidence(_ confidenceControl: StarRating) {
@@ -68,16 +74,25 @@ class ModuleDetailViewController: UIViewController {
         }
     }
     
+    
     private func calculateMastery() -> Double {
         guard let module = module else { return 0 }
-        if module.confidence >= 2 && module.rating >= 2 {
+        let oMastery = module.objectiveMastery / Double(module.objectives!.count)
+        arithmetic = oMastery + module.confidence + module.rating
+        
+        switch arithmetic {
+        case 4..<5:
+            module.mastery = 90
+        case 3.5..<4:
+            module.mastery = 80
+        case 3..<3.5:
+            module.mastery = 70
+        case 2.5..<3:
+            module.mastery = 60
+        case 2..<2.5:
+            module.mastery = 50
+        default:
             module.mastery = 100
-        } else if module.confidence >= 2 && module.rating < 2 {
-            module.mastery = 50
-        } else if module.confidence < 2 && module.rating >= 2 {
-            module.mastery = 50
-        } else {
-            module.mastery = 0
         }
         return module.mastery
     }
@@ -103,6 +118,7 @@ extension ModuleDetailViewController: UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ObjectiveCell", for: indexPath) as? ObjectiveTableViewCell
             else { return UITableViewCell() }
+        cell.delegate = self
         guard let module = module,
             let objectives = module.objectives else { return UITableViewCell() }
         let objective = objectives[indexPath.row]

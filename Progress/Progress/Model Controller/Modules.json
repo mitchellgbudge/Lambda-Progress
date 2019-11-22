@@ -149,7 +149,7 @@
        "Be able to use GCD APIs to dispatch work to another queue",
        "Be able to understand and explain the role of the main queue in iOS apps"
     ],
-    "sprint": 5
+    "sprint": 4
   },
   {
     "name": "REST Basics and Enums",
@@ -163,7 +163,7 @@
        "Be able to understand and explain common use cases for enums",
        "Be able to define custom enum types"
     ],
-    "sprint": 5
+    "sprint": 4
   },
   {
     "name": "API Authentication with Account Signup and Login",
@@ -172,7 +172,7 @@
        "Be able to differentiate between GET and POST requests, and use a URLSessionDataTask to send either type",
        "Be able to encode native Swift objects as JSON using a JSONEncoder"
     ],
-    "sprint": 5
+    "sprint": 4
   },
   {
     "name": "GET and POST Requests with Basic Authentication",
@@ -181,7 +181,7 @@
        "Be able to understand the use of, and work with a bearer token to provide authenticated requests against an API",
        "Be able to demonstrate ability to use the `Result` type from Swift 5 to provide more relevant error handling"
     ],
-    "sprint": 5
+    "sprint": 4
   },
   {
     "name": "Programmatic Constraints",
@@ -192,7 +192,7 @@
        "Be able to create autolayout constraints programmatically using the NSLayoutConstraint API",
        "Be able to create autolayout constraints programmatically using the NSLayoutAnchor API"
     ],
-    "sprint": 6
+    "sprint": 5
   },
   {
     "name": "View Animations",
@@ -203,7 +203,7 @@
        "Be able to use UIView’s animation block methods to animate simple view property changes",
        "Be able to use CABasicAnimation to animate layer properties"
     ],
-    "sprint": 6
+    "sprint": 5
   },
   {
     "name": "View Drawing",
@@ -213,7 +213,7 @@
        "Be able to better understand the `draw(_:)` method for custom drawing with Core Graphics",
        "Be able to use `IBDesignable` to preview custom controls in the storyboard"
     ],
-    "sprint": 6
+    "sprint": 5
   },
   {
     "name": "iOS Custom Controls",
@@ -224,7 +224,7 @@
        "Be able to implement custom touch handling by overriding the touch handling methods",
        "Be able to use CoreGraphics to do custom drawing"
     ],
-    "sprint": 6
+    "sprint": 5
   },
   {
     "name": "Core Data I - Basics",
@@ -238,7 +238,7 @@
        "Be able to save data to disk using the managed object context",
        "Be able to delete managed objects"
     ],
-    "sprint": 7
+    "sprint": 6
   },
   {
     "name": "Core Data II - Migration and Fetching",
@@ -247,7 +247,7 @@
        "Be able to use lightweight migration to migrate an older Core Data store to a newer version",
        "Be able to use NSFetchedResultsController to create a table view populated with Core Data objects"
     ],
-    "sprint": 7
+    "sprint": 6
   },
   {
     "name": "Core Data III - Sync Persistence",
@@ -257,7 +257,7 @@
        "Be able to use NSPredicate to fetch objects matching specific criteria",
        "Be able to sync server modifications with local persistences"
     ],
-    "sprint": 7
+    "sprint": 6
   },
   {
     "name": "Core Data IV - Multiple Contexts and Concurrency",
@@ -269,7 +269,7 @@
        "Be able to use NSPersistentContainer’s support for creating new background contexts",
        "Be able to correctly use Core Data’s API for concurrency"
     ],
-    "sprint": 7
+    "sprint": 6
   },
   {
     "name": "Intermediate Codable",
@@ -279,7 +279,7 @@
        "Be able to implement encode(to:) and init(from:) methods to customize encoding and decoding",
        "Be able to use a custom init(from:) method to decode objects whose properties contain both the key and value from a json dictionary"
     ],
-    "sprint": 9
+    "sprint": 7
   },
   {
     "name": "Swift Generics",
@@ -290,7 +290,7 @@
        "Be able to use generic constraints to restrict the types that can be used with a generic function",
        "Be able to use generic beautification to simplify generic functions and locate them to a natural type or protocol extension"
     ],
-    "sprint": 9
+    "sprint": 7
   },
   {
     "name": "Concurrency I - Fundamentals",
@@ -301,7 +301,7 @@
        "Be able to understand and use mutexes to prevent race conditions",
        "Be able to understand and explain what a deadlock is"
     ],
-    "sprint": 9
+    "sprint": 7
   },
   {
     "name": "Concurrency II - iOS Concurrency",
@@ -313,7 +313,7 @@
        "Be able to use GCD to implement thread safe properties in Swift",
        "Be able to understand and explain the difference between a GCD queue and a thread"
     ],
-    "sprint": 9
+    "sprint": 7
   },
   {
     "name": "Debugging I - Basic Debugging Tools",
@@ -327,7 +327,7 @@
        "Be able to debug exceptions using an exception breakpoint",
        "Be able to use breakpoint actions to print information without modifying source code"
     ],
-    "sprint": 10
+    "sprint": 8
   },
   {
     "name": "Debugging II - Instruments",
@@ -337,7 +337,7 @@
        "Be able to use Instruments’ Time Profiler instrument to understand slowness in an application",
        "Be able to use Instruments’ Allocations instrument to determine the cause of high memory usage"
     ],
-    "sprint": 10
+    "sprint": 8
   },
   {
     "name": "Unit Testing I - Intro to Unit Testing",
@@ -349,7 +349,7 @@
        "Be able to use XCAssert functions to test whether code is working correctly",
        "Be able to run unit tests in Xcode"
     ],
-    "sprint": 10
+    "sprint": 8
   },
   {
     "name": "Unit Testing II - UI Testing",
@@ -363,7 +363,7 @@
        "Be able to use assertions to test for expected UI behavior",
        "Be able to use expectations and the wait API to wait for UI elements to appear or change"
     ],
-    "sprint": 10
+    "sprint": 8
   },
   {
     "name": "Unit Testing III - Dependency Injection and Mocking",
@@ -373,7 +373,7 @@
        "Be able to use protocol oriented programming to create mocks for testing code with complex dependencies",
        "Be able to use expectations to test asynchronous code"
     ],
-    "sprint": 11
+    "sprint": 9
   },
   {
     "name": "Third Party Libraries and Dependency Management",
@@ -387,7 +387,7 @@
        "Be able to include sub-projects with a framework in an Xcode app project",
        "Be able to understand and explain the advantages and disadvantages of submodules, CocoaPods, and Carthage"
     ],
-    "sprint": 11
+    "sprint": 9
   },
   {
     "name": "Creating Frameworks",
@@ -398,7 +398,7 @@
        "Be able to use Swift’s access control modifiers appropriately to make code private, internal, or public",
        "Be able to make good decisions about abstraction, API surface, and modularity when creating a framework"
     ],
-    "sprint": 11
+    "sprint": 9
   },
   {
     "name": "Cocoa Design Patterns",
@@ -410,7 +410,7 @@
        "Be able to explain and use notifications",
        "Be able to explain and use the memento pattern via state restoration"
     ],
-    "sprint": 11
+    "sprint": 9
   },
   {
     "name": "Core Image",
@@ -421,7 +421,7 @@
        "Be able to apply Core Image filters to images",
        "Be able to connect UI controls to Core Image filter settings"
     ],
-    "sprint": 13
+    "sprint": 10
   },
   {
     "name": "iOS Audio",
@@ -431,7 +431,7 @@
        "Be able to record audio using AVAudioRecorder",
        "Be able to store audio on disk efficiently"
     ],
-    "sprint": 13
+    "sprint": 10
   },
   {
     "name": "iOS Video",
@@ -440,7 +440,7 @@
        "Be able to use AVFoundation’s camera capture APIs to capture video from the camera",
        "Be able to use AVPlayer to play video"
     ],
-    "sprint": 13
+    "sprint": 10
   },
   {
     "name": "MapKit",
@@ -450,7 +450,7 @@
        "Be able to display annotations on a map view",
        "Be able to customize the appearance of map annotations"
     ],
-    "sprint": 13
+    "sprint": 10
   },
   {
     "name": "Intro to Objective-C",
@@ -465,7 +465,7 @@
        "Be able to instantiate a new object in Objective-C",
        "Be able to explain and use Objective-C syntax to send messages / call methods"
     ],
-    "sprint": 14
+    "sprint": 10
   },
   {
     "name": "Objective-C Fundamentals",
@@ -478,7 +478,7 @@
        "Be able to understand and use block syntax",
        "Be able to use JSONSerialization to decode JSON into model objects"
     ],
-    "sprint": 14
+    "sprint": 11
   },
   {
     "name": "Properties, Categories, and Extensions",
@@ -491,7 +491,7 @@
        "Be able to use categories to add methods to an existing class",
        "Be able to understand and explain the difference between categories and class extensions"
     ],
-    "sprint": 14
+    "sprint": 11
   },
   {
     "name": "Primitives, NSNumber, and Mutability",
@@ -503,7 +503,7 @@
        "Be able to understand and explain the difference between immutable and mutable classes",
        "Be able to use copy/mutableCopy to convert from immutable to mutable and vice versa"
     ],
-    "sprint": 14
+    "sprint": 11
   },
   {
     "name": "Swift and Objective-C Interoperability",
@@ -516,7 +516,7 @@
        "Be able to call Objective-C methods from Swift",
        "Be able to call Swift methods from Objective-C"
     ],
-    "sprint": 15
+    "sprint": 12
   },
   {
     "name": "KVO/KVC",
@@ -527,7 +527,7 @@
        "Be able to use Key Value Observing to observe property changes on an object in Objective-C",
        "Be able to use Key Value Observing to observe property changes on an object in Swift"
     ],
-    "sprint": 15
+    "sprint": 12
   },
   {
     "name": "Memory Management",
@@ -541,7 +541,7 @@
        "Be able to use weak properties to fix retain cycles",
        "Be able to use closure capture lists to prevent retain cycles in closures"
     ],
-    "sprint": 15
+    "sprint": 12
   },
   {
     "name": "Cocoa Design Patterns in Objective-C",
@@ -551,7 +551,7 @@
        "Be able to use NSCoding to serialize and deserialize objects for on disk persistence",
        "Be able to understand and implement the singleton design pattern in Objective-C"
     ],
-    "sprint": 15
+    "sprint": 12
   }
 ]
 
